@@ -1,0 +1,16 @@
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar, % typ grafu: vertikální sloupce
+            symbolic x coords={ZŠ, SŠ, VŠ},
+            xtick=data,
+            ymin=0,
+            bar width=1cm,
+            ylabel={Počet osob},
+            title={Sloupcový graf (Kategoriální data)}
+        ]
+            \addplot[fill=blue!30, draw=blue!80, thick] coordinates {(ZŠ, 15) (SŠ, 40) (VŠ, 25)};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}

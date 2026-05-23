@@ -1,0 +1,70 @@
+\begin{tikzpicture}[
+    % Definice vzhledu boxu (uzlu)
+    task/.style={
+        draw,
+        rectangle split,
+        rectangle split parts=3,
+        rectangle split part align={center},
+        minimum width=2.5cm,
+        font=\sffamily\small,
+        fill=white
+    },
+    % Zvýraznění kritické cesty
+    critical/.style={
+        draw=red,
+        thick,
+        fill=red!5
+    },
+    % Styl šipek
+    arrow/.style={-{Stealth[scale=1.2]}, thick},
+    critArrow/.style={-{Stealth[scale=1.2]}, red, very thick}
+]
+
+% Definice makra pro obsah uzlu pro přehlednost:
+% #1: Název, #2: Trvání, #3: ES, #4: EF, #5: LS, #6: LF, #7: Rezerva
+\newcommand{\tasknode}[7]{
+    \textbf{#1} \strut \\
+    \nodepart{second}
+    \begin{tabular}{c|c|c}
+        ES: #3 & D: #2 & EF: #4
+    \end{tabular}
+    \nodepart{third}
+    \begin{tabular}{c|c|c}
+        LS: #5 & R: #7 & LF: #6
+    \end{tabular}
+}
+
+% Umístění uzlů
+\node[task, critical] (A) {
+    \tasknode{Příprava projektu}{3}{0}{3}{0}{3}{0}
+};
+
+\node[task, right=1cm of A] (B) {
+    \tasknode{Nákup materiálu}{4}{3}{7}{6}{10}{3}
+};
+
+\node[task, below=1cm of A, critical] (C) {
+    \tasknode{Výroba prototypu}{8}{3}{11}{3}{11}{0}
+};
+
+\node[task, right=1cm of C, critical] (D) {
+    \tasknode{Testování}{2}{11}{13}{11}{13}{0}
+};
+
+\node[task, above right=1cm and 1cm of D] (E) {
+    \tasknode{Dokumentace}{3}{7}{10}{10}{13}{3}
+};
+
+\node[task, right=1cm of D, critical] (F) {
+    \tasknode{Předání}{1}{13}{14}{13}{14}{0}
+};
+
+% Propojení šipkami
+\draw[critArrow] (A) -- (C);
+\draw[arrow] (A) -- (B);
+\draw[critArrow] (C) -- (D);
+\draw[arrow] (B) -- (E);
+\draw[critArrow] (D) -- (F);
+\draw[arrow] (E) -- (F);
+
+\end{tikzpicture}

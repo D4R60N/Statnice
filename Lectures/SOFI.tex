@@ -1,0 +1,1788 @@
+% TeX root = ../Main.tex
+
+% First argument to \section is the title that will go in the table of contents. Second argument is the title that will be printed on the page.
+\section{Mobilní technologie}
+\begin{quote}
+\textbf{historický vývoj, klasifikace mobilních zařízení – typy, OS, kategorie aplikací, specifické problémy mobilních platforem, senzory a jejich využití v kontextu mobilního uživatele} 
+\end{quote}
+
+\subsection{Historický vývoj}
+
+Vývoj mobilních technologií lze rozdělit do několika generací (tzv. ``G'') a klíčových milníků:
+
+\begin{description}
+    \item[1G (80. léta)] Analogové sítě (NMT). Sloužily pouze pro přenos hlasu, nízká kvalita, žádná bezpečnost.
+    
+    \item[2G (90. léta)] Přechod na digitální sítě (GSM). Zavedení SMS, MMS, lepší kvalita hovorů.
+    
+    \item[3G (počátek 2000+)] Důraz na mobilní internet a multimédia (jednotky Mbps). Video hovory.
+\end{description}
+
+\paragraph{Zlomový rok 2007/2008:}
+
+\begin{description}
+    \item[2007] Apple představuje iPhone (iOS)~-- revoluce v UI (multitouch, ovládání prsty místo stylusu, absence fyzické klávesnice).
+    
+    \item[2008] Představen první telefon s OS Android (HTC Dream) a spuštěny obchody s aplikacemi (App Store, Android Market/Google Play).
+\end{description}
+
+\begin{description}
+    \item[4G/LTE (2010+)] Vysokorychlostní internet. Masivní rozmach streamování videa, cloudových služeb a komplexních aplikací, VoIP.
+    
+    \item[5G (současnost)] Extrémně nízká latence, vysoká propustnost. Rozvoj IoT (Internet věcí), autonomních vozidel a edge computingu. Nástup skládacích telefonů a integrace AI.
+\end{description}
+
+\subsection{Klasifikace mobilních zařízení - typy}
+
+\begin{description}
+    \item[Personal Digital Assistants (PDA)] Předchůdci smartphonů. Dotykové obrazovky, virtuální klávesnice, rozpoznávání písma. Organizační funkce: diář, adresář, poznámky. Synchronizace s PC. OS: Palm OS, Windows Mobile.
+    
+    \item[Smartphony] Nejrozšířenější kategorie, kombinují telefon, počítač a multimediální zařízení. Vlastní operační systém.
+    
+    \item[Tablety] Větší obrazovka, stejné OS jako smartphony.
+    
+    \item[Wearables] Chytré hodinky, fitness náramky. Zaměřené na zdraví, notifikace a rychlé interakce.
+    
+    \item[IoT zařízení] Chytré domácnosti, průmyslové senzory. Zaměřené na automatizaci a sběr dat. Normální operační systémy i RTOS.
+\end{description}
+
+\subsection{Operační systémy}
+
+Operační systémy pro mobilní zařízení se liší v přístupu k uživatelskému rozhraní, bezpečnosti, 
+vývojářským nástrojům a obchodům s aplikacemi:
+
+\begin{description}
+    \item[iOS] Uzavřený ekosystém, vysoká bezpečnost, optimalizace pro Apple hardware. App Store s přísnou kontrolou kvality. Programování v Swiftu a Objective-C.
+    
+    \item[Android] Otevřený zdrojový kód, linuxové jádro, široká přizpůsobitelnost, velká fragmentace zařízení. Google Play s méně přísnými pravidly. Programování v Javě a Kotlinu.
+    
+    \item[Další starří OS] Windows Mobile, BlackBerry OS, Symbian, Tizen.
+\end{description}
+
+\subsection{Kategorie aplikací}
+
+Aplikace pro mobilní zařízení jsou různého typu, v závislosti na způsobu vývoje a 
+cílové platformě:
+
+\begin{description}
+    \item[Nativní aplikace] Aplikace napsané pro konkrétní OS (iOS, Android). 
+    Vysoký výkon, přístup ke všem funkcím zařízení. Vyžadují vývoj pro každou platformu zvlášť.
+    \item[Webové aplikace] Spouštěné v prohlížeči, napsané v HTML, CSS, JavaScriptu. 
+    Platformově nezávislé, ale omezený přístup k funkcím zařízení a nižší výkon.
+    \item[Hybridní aplikace] Kombinace nativních a webových technologií (např. 
+    Apache Cordova, Ionic). Snaží se nabídnout kompromis mezi výkonem 
+    a multiplatformní kompatibilitou.
+    \item[PWA (Progressive Web Apps)] Webové aplikace s funkcemi blízkými nativním 
+    aplikacím (offline režim, push notifikace). Spouštěné v prohlížeči, ale mohou být 
+    "instalovány" na zařízení.
+    \item[Cross-platformní frameworky] Nástroje pro vývoj jedné kódové základny, 
+    která se překládá do nativních aplikací pro různé platformy 
+    (např. React Native, Flutter). Snaží se minimalizovat potřebu psaní specifického 
+    kódu pro každou platformu.
+\end{description}
+
+\subsection{Specifické problémy mobilních platforem}
+\begin{description}
+    \item[Fragmentace] Různé verze OS, různé hardwarové konfigurace. Ztížená 
+    optimalizace a testování aplikací.
+    \item[Bezpečnost] Neautorizovaný přístup k datům, malware (zejména u Androidu).
+    Ochrana osobních údajů, sandboxing, oprávnění aplikací.
+    \item[Omezené zdroje] Nižší výkon, omezená baterie, menší úložiště. Nutnost 
+    optimalizace kódu a efektivního využití zdrojů.
+    \item[Uživatelské rozhraní] Menší obrazovka, dotykové ovládání. Nutnost 
+    přizpůsobení UI pro různé velikosti a rozlišení.
+    \item[Síťová konektivita] Nestabilní připojení, přechod mezi sítěmi (Wi-Fi, 4G/5G). 
+    Práce s offline režimem. Snížená spotřeba dat.
+\end{description}
+
+\subsection{Senzory a jejich využití v kontextu mobilního uživatele}
+
+Oproti desktopovým počítačům mají mobilní zařízení širokou škálu integrovaných senzorů, 
+které umožňují nové způsoby interakce s okolním světem:
+
+\begin{description}
+    \label{des:senzory}
+    \item[Akcelerometr] Měří zrychlení, detekce pohybu a orientace zařízení. 
+    Používá se pro krokoměry, detekci pádu, ovládání gesty.
+    \item[Gyroskop] Měří rychlost rotace zařízení. Používá se pro herní aplikace, 
+    navigaci a realitu.
+    \item[GPS] Poskytuje geografické informace. Používá se pro navigaci, mapy a 
+    lokální služby.
+    \item[Proximity senzor] Detekuje přítomnost předmětů v blízkosti zařízení. 
+    Používá se pro automatické vypnutí obrazovky při volání.
+    \item[Světelný senzor] Měří úroveň osvětlení v okolí zařízení. Používá se pro 
+    automatickou úpravu jasu obrazovky.
+    \item[Biometrické senzory] Čtečky otisků prstů, rozpoznávání obličeje. Používají 
+    se pro autentizaci a zabezpečení.
+    \item[Magnetometr] Měří magnetické pole, funguje jako kompas. Používá se pro 
+    navigaci a orientaci.
+\end{description}
+
+\hyperref[sub:vsHW]{Zpět} k využití specifického HW (Kapitola 2.)
+
+\section{Vývoj mobilních aplikací}
+\begin{quote}
+\textbf{specifika vývoje mobilního softwaru, nativní vs hybridní vývoj, Základní charakteristika OS Android (architektura, nástroje) nebo iOS. Vývojářské nástroje a jazyky/frameworky pro nativní vývoj. Obecná problematika tvorby UI (Views, Compose, Swift UI případně dalších). Využití specifického HW, způsoby napojení na IS}
+\end{quote}
+
+\subsection{Specifika vývoje mobilního softwaru}
+
+Vývoj mobilních aplikací má svá specifika, která se liší od vývoje pro desktopové nebo 
+webové platformy. Klíčové aspekty zahrnují:
+
+\begin{description}
+    \item[Optimalizace pro omezené zdroje] Mobilní zařízení mají omezenou výpočetní 
+    kapacitu, paměť a baterii. Vývojáři musí optimalizovat kód a minimalizovat 
+    spotřebu zdrojů.
+    \item[Uživatelské rozhraní] Menší obrazovka a dotykové ovládání vyžadují 
+    přizpůsobení UI pro různé velikosti a rozlišení. Důraz na jednoduchost a 
+    intuitivnost.
+    \item[Fragmentace] Různé verze OS, různé hardwarové konfigurace ztěžují 
+    optimalizaci a testování aplikací.
+    \item[Bezpečnost] Mobilní platformy jsou náchylné k bezpečnostním hrozbám, 
+    jako je malware a neoprávněný přístup k datům. 
+    Vývojáři musí implementovat bezpečnostní opatření.
+    \item[Integrace s hardwarem] Mobilní zařízení mají širokou škálu senzorů a 
+    funkcí (GPS, kamera, akcelerometr).
+    \item[Distribuce a monetizace] Mobilní aplikace jsou distribuovány prostřednictvím 
+    obchodů s aplikacemi (App Store, Google Play), které
+    mají specifické požadavky a pravidla. 
+    \item[Sandboxing a oprávnění] Mobilní platformy používají sandboxing pro izolaci 
+    aplikací a systém oprávnění pro kontrolu přístupu k funkcím zařízení.
+\end{description}
+
+\subsection{Nativní vs. hybridní vývoj}
+
+Nativní vývoj znamená psaní aplikace specificky pro jeden operační systém (iOS, Android), 
+zatímco hybridní vývoj využívá webové technologie (HTML, CSS, Javascript) a běží v 
+rámci WebView nebo nativního kontejneru.
+
+Nativní vývoj nabízí lepší výkon, přístup ke všem funkcím zařízení a lepší uživatelský 
+zážitek, ale vyžaduje vývoj pro každou platformu zvlášť. Hybridní vývoj umožňuje 
+multiplatformní kompatibilitu s jednou codebase, ale může mít nižší výkon a omezený 
+přístup k funkcím zařízení.
+
+\begin{description}
+    \item[Nativní vývoj] iOS (Swift, Objective-C), Android (Java, Kotlin). 
+    \item[Hybridní vývoj] Frameworky jako Apache Cordova, Ionic.
+\end{description}
+
+\subsection{Základní charakteristika OS Android}
+
+Android je otevřený operační systém založený na linuxovém jádře, spravovaný společností 
+Google. Nad jadrem je vrstva Android Runtime (dříve Dalvik) pro spouštění aplikací, 
+knihovny pro různé funkce a aplikační rámec pro vývojáře. Aplikace jsou psány v Javě 
+nebo Kotlinu a běží v sandboxu (izolovaně) pro bezpečnost. 
+Komponenty Androidu:
+\begin{description}
+    \item[Activity] Uživatelské rozhraní a interakce.
+    \item[Service] Běží na pozadí pro dlouhodobé operace.
+    \item[Broadcast Receiver] Reaguje na systémové události. (např. změna sítě)
+    \item[Content Provider] Sdílení dat mezi aplikacemi.
+\end{description}
+Vývojové nástroje zahrnují Android Studio, SDK, emulátory. Způsoby tvorby UI: 
+\begin{description}
+    \item[XML views] Tradiční přístup k tvorbě UI pomocí XML a Java/Kotlin.
+    \item[Jetpack Compose] Moderní deklarativní framework pro tvorbu UI v Kotlinu.
+\end{description}
+Struktura OS:
+\begin{description}
+    \item[Jádro] Linuxové jádro pro správu hardwaru a systémových zdrojů.
+    \item[Hal] Hardware Abstraction Layer pro komunikaci s hardwarem.
+    \item[Android Runtime] Spouštění aplikací, správa paměti.
+    \item[Knihovny] Nativní knihovny pro grafiku, databáze, síť, atd.
+    \item[Java API] Pro vývoj aplikací.
+    \item[Aplikační rámec] API pro vývojáře pro přístup k funkcím zařízení.
+    \item[Aplikace] Uživatelské aplikace a systémové aplikace.
+\end{description}
+
+\subsection{Základní charakteristika OS iOS (Volitelné stačí znát pouze Android)}
+iOS je uzavřený operační systém vyvinutý společností Apple pro své mobilní zařízení.
+Je založen na unixovém jádře a používá architekturu MVC (Model
+-View-Controller). Aplikace jsou psány v Swiftu nebo Objective-C a běží v sandboxu 
+pro bezpečnost.
+Vývojové nástroje zahrnují Xcode, iOS SDK, simulátory (Apple nazev pro emulátory). Způsoby tvorby UI:
+\begin{description}
+    \item[Storyboardy] Vizualní nástroj pro návrh UI a navigace mezi obrazovkami.
+    \item[SwiftUI] Moderní deklarativní framework pro tvorbu UI v Swiftu.
+\end{description}
+Struktura OS:
+\begin{description}
+    \item[Jádro] Unixové jádro pro správu hardwaru a systémových zdrojů.
+    \item[Core OS] Nízká úroveň služeb, jako správa paměti, bezpečnost, atd.
+    \item[Core Services] Služby pro síť, data, atd.
+    \item[Media] Knihovny pro grafiku, zvuk, video.
+    \item[Application Framework] API pro vývojáře pro přístup k funkcím zařízení.
+    \item[Aplikace] Uživatelské aplikace a systémové aplikace.
+\end{description}
+
+\subsection{Vývojářské nástroje a jazyky/frameworky pro nativní vývoj}
+\begin{description}
+    \item[iOS] Xcode IDE, Swift a Objective-C jazyky, iOS SDK, Interface Builder (součást Xcode) pro návrh UI. Framework SwiftUI pro deklarativní UI.
+    \item[Android] Android Studio IDE, Java a Kotlin jazyky, Android SDK, XML pro návrh UI, Framework Jetpack Compose pro
+    deklarativní UI.
+\end{description}
+
+\subsection{Obecná problematika tvorby UI}
+Tvorba uživatelského rozhraní pro mobilní zařízení zahrnuje několik klíčových aspektů:
+\begin{description}
+    \item[Responsivita] UI musí být přizpůsobeno různým velikostím obrazovek a 
+    rozlišením. Použití flexibilních layoutů a komponent.
+    \item[Dotykové ovládání] UI musí být optimalizováno pro dotykové ovládání, s 
+    dostatečně velkými tlačítky a intuitivními gesty.
+    \item[Výkon] UI by mělo být plynulé a rychlé, minimalizovat zpoždění a 
+    optimalizovat načítání dat.
+    \item[Designové principy] Dodržování platformových designových směrnic 
+    (Material Design pro Android, Human Interface Guidelines pro iOS) pro konzistentní 
+    a intuitivní uživatelský zážitek.
+    \item[Testování] Testování UI na různých zařízeních a verzích OS pro zajištění 
+    kompatibility a správné funkčnosti.
+\end{description}
+
+\paragraph*{Views}
+Tradiční přístup k tvorbě UI pomocí XML (Android) nebo Storyboardů (iOS) a 
+programování v Java/Kotlin nebo Swift/Objective-C. Umožňuje detailní kontrolu nad 
+vzhledem a chováním UI, ale je náročnější na údržbu a aktualizace.
+XML views v Androidu definují rozložení a v kódu se odkazuje pomocí ID. Komponenty
+jako: TextView, Button, ImageView, atd.
+
+\paragraph*{Compose a SwiftUI}
+Moderní deklarativní frameworky pro tvorbu UI, které umožňují psaní UI kódu přímo v 
+programovacím jazyce (Kotlin pro Jetpack Compose a Swift pro SwiftUI). Snadné 
+přizpůsobení různým typům zařízení, lepší integrace s logikou aplikace a jednodušší 
+aktualizace UI na základě změn stavu.
+Jetpack Compose tvoří UI pomocí funkcí s anotací @Composable, které vracejí UI 
+komponenty. 
+\paragraph*{Architektury:} 
+\begin{description}
+    \item[MVVM] Model-View-ViewModel, ViewModel obsahuje data pro UI. Model komunukuje s UI a dodává data pro zobrazení. 
+    ViewModel zpracovává logiku a aktualizuje UI na základě změn stavu.
+    \item[MVI] Model-View-Intent, UI pouze volá akce (intenty), které mění stav modelu, a UI se aktualizuje na základě změn stavu.
+\end{description}
+
+\subsection{Využití specifického HW} 
+\label{sub:vsHW}
+Mobilní zařízení mají širokou škálu integrovaných senzorů a funkcí, které umožňují 
+nové způsoby interakce s okolním světem. Vývojáři mohou využít tyto senzory pro různé 
+účely, jako je detekce pohybu, navigace, autentizace a další.
+
+\begin{description}
+    \item[Senzory] Akcelerometr, gyroskop, GPS, proximity senzor, světelný senzor, 
+    biometrické senzory, magnetometr. Viz. \hyperref[des:senzory]{Senzory}
+    \item[Kamera] Využití pro fotografování, skenování QR kódů, rozšířenou realitu.
+    \item[Mikrofon] Využití pro hlasové ovládání, rozpoznávání řeči, nahrávání zvuku.
+    \item[Bluetooth a NFC] Využití pro komunikaci s jinými zařízeními, 
+    bezkontaktní platby, připojení periferií.
+\end{description}
+Přístup k těmto funkcím se obvykle realizuje prostřednictvím API poskytovaných 
+operačním systémem, je nutné získat oprávnění od uživatele pro přístup k citlivým 
+funkcím a datům. Od androidu 6.0 a iOS 10 je nutné žádat o oprávnění za běhu 
+aplikace než pouze při instalaci.
+
+\subsection{Způsoby napojenína IS}
+Mobilní aplikace často potřebují komunikovat s informačními systémy (IS) pro získávání 
+dat, autentizaci uživatelů, synchronizaci a další funkce. Způsoby napojení na 
+IS zahrnují:
+\begin{description}
+    \item[REST API] Nejčastější způsob komunikace, využívá HTTP protokol pro 
+    výměnu dat ve formátu JSON nebo XML.
+    \item[GraphQL] Alternativa k REST, umožňuje klientům specifikovat přesně, jaká data 
+    potřebují. Protokol: HTTP
+    \item[WebSocket] Pro real-time komunikaci, umožňuje obousměrnou komunikaci mezi 
+    klientem a serverem.
+\end{description}
+Při napojení na IS je důležité zohlednit bezpečnostní aspekty, jako je autentizace, 
+autorizace, šifrování dat a ochrana proti útokům (např. SQL injection, XSS).
+
+\paragraph*{Implementace na Androidu:} Knihovny jako Retrofit a OkHttp (starší) pro REST API a WebSocket, 
+Apollo pro GraphQL. Autentizace může být řešena pomocí OAuth 2.0, JWT, nebo API klíčů. 
+Lokální ukládání dat může být realizováno pomocí SQLite (knihovna Room), 
+SharedPreferences nebo DataStore. Ke komunikaci Jetpack Compose využívá
+Interceory: zachytávají události, Authenticator specialní Inreceptor pro autentizaci, 
+Logging Interceptor pro logování síťové komunikace.
+
+\newpage
+
+\section{Inversion of Control (IoC)}
+\begin{quote}
+\textbf{principy, význam, a použití přístupu, vztah IoC a Dependency Injection. Příklady použití, nástroje podporující IoC}
+\end{quote}
+
+\subsection{Principy}
+Inversion of Control (IoC) je princip návrhu softwaru, který obrací tradiční řízení 
+toku programu. Místo toho, aby komponenty samy řídily své závislosti a životní cyklus, 
+IoC umožňuje externímu kontejneru nebo frameworku řídit tyto aspekty.
+IoC je všeobecný koncept, který může být implementován různými způsoby, z nichž 
+nejběžnější je Dependency Injection (DI).
+
+\subsection{Význam}
+\begin{description}
+    \item[Modularita] Komponenty jsou méně závislé na konkrétních implementacích 
+    svých závislostí, což usnadňuje jejich výměnu a údržbu.
+    \item[Testovatelnost] Snadnější testování díky možnosti snadno nahradit závislosti 
+    mocky.
+    \item[Flexibilita] Snadnější změna implementace závislostí bez nutnosti měnit kód, který je používá.
+    \item[Znovupoužitelnost] Komponenty mohou být znovu použity v různých kontextech díky oddělení od konkrétních implementací závislostí.
+\end{description}
+
+\subsection{Použití přístupu}
+IoC je možné implementovat několika přístupy.
+\begin{description}
+    \item[Dependency Injection (DI)] Závislosti jsou "injektovány" do komponenty zvenčí, obvykle prostřednictvím konstruktoru, setterů nebo rozhraní.
+    \begin{verbatim}
+    public ServiceA(ServiceB serviceB) {
+        this.serviceB = serviceB;
+    }
+    \end{verbatim}
+    \item[Service Locator] Komponenta získává své závislosti z centrálního registru nebo "služby", která je zodpovědná za poskytování instancí.
+    \begin{verbatim}
+    ServiceB serviceB = ServiceLocator.getService(ServiceB.class);
+    \end{verbatim}
+    \item[Event-driven] Komponenty komunikují prostřednictvím událostí, které jsou zpracovávány externím systémem.
+    \begin{verbatim}
+        eventBus.post(() => {
+            // Handle event
+        });
+    \end{verbatim}
+\end{description}
+
+
+\subsection{Vztah IoC a Dependency Injection}
+Dependency Injection (DI) je konkrétní implementace principu Inversion of Control (IoC).
+Zatímco IoC je obecný koncept, který může být realizován různými způsoby, 
+DI je konkrétní způsob, jak dosáhnout IoC tím, že umožňuje externímu systému 
+"injektovat" závislosti do komponenty.
+DI je nejběžnější a nejpoužívanější způsob implementace IoC.
+
+\subsection{Příklady použití a nástroje podporující IoC}
+IoC se používá v mnoha moderních frameworkách a knihovnách pro vývoj softwaru, 
+zejména v oblasti webových a mobilních aplikací. Například:
+\begin{description}
+    \item[Spring Framework (Java)] Používá IoC kontejner pro správu závislostí a životního cyklu komponent.
+    Využití DI pomocí anotací jako @Autowired pro automatické vkládání závislostí. @Component pro označení komponenty, 
+    @Service pro označení služby, @Repository pro označení repozitáře.
+    Princip: Dependency Injection (DI) pomocí anotací. 
+     \item[Angular (TypeScript)] Používá DI pro správu služeb a komponent.
+     Princip: Dependency Injection (DI) pomocí dekorátorů jako @Injectable.
+     \item[ASP.NET Core (C\#)] Podporuje DI pro správu závislostí v aplikacích.
+     Princip: Dependency Injection (DI) pomocí vestavěného kontejneru a metod jako AddTransient, AddScoped, AddSingleton.
+     \item[NestJS (Node.js)] Používá DI pro správu závislostí v serverových aplikacích.
+     Princip: Dependency Injection (DI) pomocí dekorátorů jako @Injectable a modul
+     \item[Android] Knihovny jako Dagger a Hilt pro implementaci DI v Android aplikacích.
+        Princip: Dependency Injection (DI) pomocí anotací @Inject a generování kódu pro správu závislostí.
+\end{description}
+
+\newpage
+
+\section{Architektura informačních systémů}
+\begin{quote}
+\textbf{vrstva business logiky, prezentační vrstva, datová vrstva - využití relačních a nerelačních DB v kontextu IS, návrhové vzory pro IS, metody tvorby, komunikace mezi IS, automatizace, DevOps, využití do Cloudu}
+\end{quote}
+Informační systém je softwarová aplikace zpracovávající a poskytující 
+data pro podporu plánování, rozhodování a řízení. Je to celek složený z 
+počítačového hardwaru a souvisejícího softwaru, k němuž patří také lidé, 
+kteří tento hardware a software využívají, a procesy (činnosti), které 
+přitom vykonávají za účelem sběru, zpracování a šíření informací 
+potřebných k plánování, rozhodování a řízení.
+
+\paragraph*{Charakteristika IS:}
+\begin{itemize}
+    \item Aplikace nebo integrovaná sada aplikací
+    \item Slouží pro celou organizaci (ne jen pro jednoho uživatele)
+    \item Sdílení dat mezi uživateli
+    \item Běží mimo počítače uživatelů (na centrální infrastruktuře/v cloudu)
+    \item Uživatelé využívají pro přístup k IS svých klientských zařízení
+\end{itemize}
+
+\paragraph*{Typy IS:}
+\begin{description}
+    \item[Podnikové IS] -- Systémy využívané komerčními organizacemi a dostupné zejména pro jejich pracovníky. (Univerzální, Speciální, Na míru)
+    \item[Veřejné IS] -- Veřejně či komunitně dostupné IS. (Encyklopedie (např. wikipedie), knihovní systémy, vyhledávače, mapové systémy, …)
+\end{description}
+
+\subsection{Vrstvy IS}
+\label{sub:vrstvy}
+\paragraph*{Vrstva business logiky:}
+Vrstva business logiky koordinuje tok dat mezi prezentační a datovou vrstvu. Obsahuje 
+většinu algoritmů systému. Většinou reprezentovaná třídami v objektově 
+orientovaném jazyce (Java, C\#, JavaScript, …). S okolím komunikuje pomocí 
+rozhraní, např. REST API, SOAP, atd.
+
+\paragraph*{Vrstva prezentační:}
+Prezenční vrstva zpracovává vstupy od uživatele a volá služby vrstvy 
+business logiky. Sama neobsahuje žádnou business logiku, kromě validace, 
+jednoduché výpočty (důraz na efektivitu a výkon).
+Často postavená na návrhovém vzoru Model-View-Controller a jeho 
+variacích. Časté využití technologií založených na JavaScriptu. (Html, CSS, JS, Reacts, Flutter, WPF)
+
+\paragraph*{Vrstva datová:}
+Datová vrstva obsehuje služby pro ukládání, načítání dat a dotazování.
+Pracuje s databázemi, cache, soubory, atd. Primárně zajiťuje persistentní 
+uložení dat, jejich dostupnost a integritu.
+Pojmy:
+\begin{itemize}
+    \item \textbf{CRUD} -- Create, Read, Update, Delete.
+    \item \textbf{ORM} -- Mapování objektové struktury aplikace na relační strukturu databáze.
+    \item \textbf{Scéma} -- Schéma je datový model, který popisuje data a vztahy mezi nimi. (datové typy, domény - povolené/povinné hodnoty, relace - vazby mezi entitami)
+\end{itemize}
+Většinou reprezentovaná databází:
+\begin{itemize}
+    \item \textbf{SQL:} Mají dané schéma. Jsou reprezentované relačním 
+    datovým modelem. Důraz na integritu dat. Princip ACID:
+    \begin{itemize}
+        \item Atomicity -- Pokud se transakce skládá z několika kroků, databáze provede všechny, nebo žádný. Pokud v průběhu dojde k chybě, celá transakce se vrátí zpět (tzv. rollback).
+        \item Consistency -- Transakce musí převést databázi z jednoho platného stavu do druhého. Veškerá data musí splňovat definovaná pravidla, omezení (constraints) a integritu.
+        \item Isolation -- Souběžně probíhající transakce se vzájemně neovlivňují. Výsledky rozpracované transakce nejsou viditelné pro ostatní procesy, dokud není transakce zcela dokončena.
+        \item Durability -- Po úspěšném dokončení transakce (commit) jsou změny trvale zapsány a nevymaže je ani náhlý výpadek proudu či pád systému.
+    \end{itemize}
+    Vhodné pro IS s komplexními datovými vztahy (ERP, Účetní systémy apod).
+	Možné pouze vertikální škálování (zvýšení výkonu jednoho stroje).
+    Technologie například MySQL, PostgreSQL, MS SQL, Oracle, MariaDB.
+    \item \textbf{NOSQL:} Mají flexibilní schema. Důraz na distribuci dat a škálovatelnost.
+    Typy:
+    \begin{itemize}
+        \item Dokumentové -- Ukládání ve formátu JSON/BSON. Např. MongoDB, CouchDb.
+        \item Key-Value -- Ukládání do mapy zvané Hash. Často jako cache. Např. Redis.
+        \item Sloupcové -- Čtení po sloupcích což je efektivní pro velké datasety. Např. Cassandra.
+        \item Grafové -- Specializace na propojená data. Využití například u sociálních sítí. Např. Neo4j.
+    \end{itemize}
+    Vhodné pro BigData, aplikace s rychlým vývoje struktura, vysoká dostupnost, realtime (chat, senzory, IoT).
+    Podpora transakcí je slabší nebo žádná. Nemají standardizovaný dotazovací
+    jazyk jako SQL. Jsou vhodné na horizontální škálování (přidání dalších strojů).
+  
+    Více k \hyperref[sec:nosql]{NOSQL}. (Kapitola 6.)
+    \label{sub:dv}
+
+\end{itemize}
+
+\subsection{Architektury IS}
+Architektura je sadou zásadních rozhodnutí týkajících se struktury 
+systému, návrhu komponent, jejich vzájemných vztahů a vztahů s okolím.
+Jde o nejvyšší (a nejdůležitější) úroveň SW návrhu.
+
+\paragraph*{Co řeší:}
+\begin{itemize}
+    \item Rozčlenění systému na samostatné celky (subsystémy/komponenty, mikroslužby)
+    \item Hlavní komponenty IS a jejich rozhraní
+    \item Hlavní vrstvy systému, způsob jejich realizace a vzájemné komunikace
+    \item Doménový model
+    \item Použité technologie
+    \item Způsob integrace s okolními systémy a periferiemi
+\end{itemize}
+\paragraph*{Typy:}
+\begin{description}
+    \item[Vrstvená architektura:] Také označovaná jako „Vrstvený monolit“ nebo jen „Monolit“.
+    Systém je vytvořen jako jeden nasaditelný celek, který je 
+    vnitřně rozčleněn na vrstvy, komponenty. Obsahuje všechny zmíněné \hyperref[sub:vrstvy]{vrstvy}.
+    Snadné ladění a testování ale špatná údržba a škálovatelnost.
+    \item[Modulární monolit:] Architektura je rozdělená do modulů, což zlepšuje
+    organizaci, ale stále běží jako jedna aplikace. 
+    (Modul = samostatná logická jednotka, např. fakturace, objednávky)
+    \item[Architektura založená na mikroslužbách:] Rozdělení jednoho 
+    systému na více samostatných a samostatně nasaditelných celků.
+    (Mikroslužba = samostatně nasaditelná komponenta IS, často se samostatnou DB, která se zaměřuje na omezenou oblast business logiky)
+    Dobrá škálovatelnost,dostupnost a podpora paralelního vývoje.
+    Složité nasazení, údržba a ladění.
+    Služby jsou spravovány nástrojem pro orchestraci, například 
+    Kubernetes nebo Docker swarm.
+    \label{sub:mikrosluzby}
+    \hyperref[sub:mikrosluzby2]{Zpět} (Kapitola 5.)
+\end{description}
+
+
+\paragraph*{Konkrétní návrhové vzory:}
+\begin{description}
+    \item[MVC (Model-View-Controller):] Oddělení datového modelu (Model), uživatelského rozhraní (View) a řídicí logiky (Controller). Cílem je, aby změna v UI minimálně ovlivňovala datovou logiku a naopak.
+
+    \item[MVVM (Model-View-ViewModel):] Používaný ve webových a mobilních aplikacích (Angular, WPF). ViewModel připravuje data z modelu přímo pro potřeby zobrazení a využívá obousměrnou vazbu dat (data binding).
+
+    \item[Hexagonální architektura (Ports and Adapters):] Zaměřuje se na izolaci jádra business logiky od vnějších vlivů (databáze, API, UI). Jádro definuje "porty" (rozhraní) a okolí implementuje "adaptéry". Díky tomu lze snadno vyměnit např. typ databáze bez zásahu do logiky.
+\end{description}
+
+\subsection{Metody tvorby IS}
+Metodiky se dnes dělí primárně podle přístupu k plánování a změnám na 
+tradiční (prediktivní) a agilní. Většinou se kombinují.
+
+\subsubsection{Tradiční (prediktivní) přístupy}
+Tyto metody předpokládají, že lze na začátku projektu definovat všechny požadavky, které se pak v průběhu vývoje nemění.
+
+\begin{description}
+    \item[Vodopádový model (Waterfall):] Lineární proces, kde každá fáze (Požadavky, Návrh, Implementace, Testování, Nasazení, Údržba) následuje až po úplném dokončení té předchozí. Těžkopádný přístup.
+    \item[RUP (Rational Unified Process):] Robustní metodika, která je sice iterativní, ale stále velmi formální a orientovaná na detailní dokumentaci a UML modely.
+    Iterativní metoda se čtyřmi fázemi:
+    \begin{itemize}
+        \item Zahájení (ujasnit vizi a cíle)
+        \item Upřesnění (návrh systému)
+        \item Konstrukce (vývoj, testování)
+        \item Přechod do provozu
+    \end{itemize}
+    \item[PRINCE2 (PRojects IN Controlled Environment):] Jde o 
+    projektový rámec, který dává jasné role, fáze a rozhodovací 
+    mechanismy. Dá se použít na velký projekt i malou aplikaci.Projekt 
+    dělí na řiditelné etapy s měřitelnými výstupy.
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{prince2.png}
+    \caption{PRINCE2 - Aspekty řízení projektu}
+    \end{figure}
+\end{description}
+
+\subsubsection{Agilní přístupy}
+Reagují na fakt, že požadavky zákazníka se v čase mění. Namísto velkého plánu na začátku sázejí na krátké cykly a průběžné dodávání funkčního softwaru.
+
+\begin{description}
+    \item[SCRUM:] Nejpoužívanější agilní rámec. Práce probíhá ve sprintech (2-4 týdny). Klíčové jsou role (Scrum Master, Product Owner) a pravidelné schůzky (Daily Stand-up, Retrospektiva).
+    Velice flexibilní, snadné změny během vývoje a rychlá zpětná vazba.
+    \item[KANBAN:] Zaměřuje se na plynulost toku práce (flow) a vizualizaci úkolů na tabuli. Neřeší pevné sprinty, ale soustředí se na omezení rozdělané práce (WIP limit).
+    \item[XP (Extrémní programování):] Zaměřeno na kvalitu kódu a technické praktiky jako párové programování, TDD (vývoj řízený testy) a časté vydávání verzí.
+\end{description}
+
+\subsection{Komunikace mezi IS}
+Způsob, jakým si systémy vyměňují data, zásadně ovlivňuje jejich propustnost, stabilitu a míru provázanosti (coupling).
+
+\paragraph*{1. Synchronní komunikace (Request-Response)}
+Klient odešle požadavek a čeká na odpověď serveru. Pokud server neodpovídá, klient je blokován.
+
+\begin{description}
+    \item[REST (Representational State Transfer):] Dnes nejrozšířenější standard využívající protokol HTTP a formát JSON. Je bezstavový a využívá standardní metody (GET, POST, PUT, DELETE).
+    \item[SOAP (Simple Object Access Protocol):] Starší, robustnější protokol využívající XML. Často se používá v bankovnictví nebo enterprise sféře díky silnému typování a bezpečnosti (WS-Security).
+    \item[gRPC:] Moderní, vysoce výkonný framework od Google. Používá binární formát Protocol Buffers a HTTP/2. Ideální pro interní komunikaci mezi mikroslužbami díky nízké latenci.
+\end{description}
+
+\paragraph*{2. Asynchronní komunikace (Messaging)}
+Systémy spolu komunikují nepřímo skrze prostředníka (Message Broker). Odesílatel nečeká na zpracování, zpráva je uložena do fronty.
+
+\begin{description}
+    \item[Message Queues (Bod-bod):] Zpráva je doručena právě jednomu příjemci. Pokud je příjemců více, rozdělují si práci mezi sebou (např. RabbitMQ).
+    \item[Publish/Subscribe (Pub/Sub):] Odesílatel publikuje zprávu do tématu (Topic) a tu obdrží všichni odběratelé, které dané téma zajímá. Typickým zástupcem je Apache Kafka.
+    \item[Výhody:] Časové rozdělení (systémy nemusí běžet současně), odolnost proti špičkám v zátěži, snadné škálování.
+\end{description}
+
+\paragraph*{3. Ostatní formy integrace}
+\begin{description}
+    \item[Webhooks:] "Obrácené API". Server pošle HTTP požadavek na předem definovanou URL klienta, jakmile nastane určitá událost (např. proběhnutí platby).
+    \item[Sdílená databáze:] Více systémů přistupuje ke stejné DB. Považováno za antipattern, protože změna schématu v jednom systému rozbije ostatní.
+    \item[Souborový přenos (Batch processing):] Předávání dat v dávkách (např. CSV nebo XML soubory přes SFTP). Často u starších systémů (legacy) nebo pro přenos velkých objemů dat.
+    \item[WebSockets:] Trvalé spojené mezi klientem a serverem. Vhodné pro realtime app (chat, hry).
+    \item[Enterprice Service Bus (ESB):] Middleware plaforma pro 
+    centralizovanou integraci. Podporuje různé protokoly. Např. Apache Came, WSO2.
+\end{description}
+
+\subsection{Automatizace a DevOps}
+DevOps (spojení slov Development a Operations) je metodika, která bourá bariéry mezi vývojáři a IT správci.
+Automatizace je zahrnuje build, testování, nasazení, monitoring atd.
+
+\paragraph*{CI/CD (Continuous Integration / Continuous Deployment):}
+Odstraňuje manuální kroky při nasazování a zajišťuje tak automatizaci.
+\begin{itemize}
+    \item \textbf{CI (Průběžná integrace):} Automatizovaný proces, kdy se kód od vývojářů pravidelně slučuje do hlavní větve. Každý "commit" spustí automatické sestavení (build), sadu testů, analýza kódu, a další úkony. Proces, který se snaží udržet všechny (vývojáře, testery …) synchronizovány,
+    \item \textbf{CD (Průběžné doručování/nasazování):} Navazuje na CI. Automaticky připraví aplikaci k nasazení. U \textit{Deploymentu} jde kód po úspěšných testech rovnouna prostředí bez lidského zásahu.
+\end{itemize}
+
+\paragraph*{Klíčové praktiky a nástroje:}
+\begin{itemize}
+    \item \textbf{IaC (Infrastructure as Code):} Správa serverů a sítí pomocí konfiguračních souborů místo manuálního nastavování (např. Terraform, Ansible). Infrastruktura se pak chová jako software (lze ji verzovat).
+    \item \textbf{Kontejnerizace:} Balení aplikace a všech jejích závislostí do jednoho balíčku (kontejneru), který běží stejně na počítači vývojáře i na serveru. Dominantním nástrojem je \textbf{Docker}.
+    \item \textbf{Orchestrace:} Správa velkého množství kontejnerů, jejich škálování a restartování v případě výpadku. Standardem je \textbf{Kubernetes}.
+    \item \textbf{Monitoring a Logging:} Neustálé sledování výkonu systému a sběr chybových logů (např. ELK stack - Elasticsearch, Logstash, Kibana), aby bylo možné reagovat na problémy dříve, než si jich všimne uživatel.
+\end{itemize}
+
+\paragraph*{Výhody DevOps:}
+\begin{itemize}
+    \item \textbf{Rychlost:} Častější vydávání nových funkcí (místo jednou za půl roku klidně několikrát denně).
+    \item \textbf{Spolehlivost:} Automatizované testy zachytí chyby dříve, než se dostanou k uživateli.
+    \item \textbf{Škálovatelnost:} Díky cloudu a automatizaci lze snadno navyšovat výkon podle aktuální zátěže.
+\end{itemize}
+
+\paragraph*{Využití do Cloudu:}
+\begin{itemize}
+    \item \textbf{IaaS (Infrastructure as a Service):} Poskytovatel nabízí základní výpočetní zdroje – virtuální servery, úložiště a sítě. Uživatel si sám spravuje operační systém, middleware a aplikace (např. AWS EC2, Microsoft Azure VM).
+    
+    \item \textbf{PaaS (Platform as a Service):} Poskytovatel dodává kompletní platformu pro vývoj a běh aplikací. Vývojář se stará pouze o kód a data, nikoliv o správu OS nebo aktualizace runtime prostředí (např. Heroku, Google App Engine).
+
+    \item \textbf{SaaS (Software as a Service):} Koncový software je poskytován přímo přes webový prohlížeč. Uživatel neřeší žádnou technickou stránku, pouze službu využívá (např. Office 365, Salesforce, Gmail).
+
+    \item \textbf{FaaS (Function as a Service / Serverless):} Vývojář nasazuje pouze jednotlivé funkce (kousky kódu), které se spustí v reakci na určitou událost. Platí se pouze za čas běhu dané funkce (např. AWS Lambda, Azure Functions).
+
+    \item \textbf{Modely nasazení (Deployment Models):}
+    \begin{itemize}
+        \item \textit{Veřejný cloud:} Sdílená infrastruktura u velkých poskytovatelů (nákladově efektivní).
+        \item \textit{Privátní cloud:} Vyhrazená infrastruktura pro jednu organizaci (vyšší bezpečnost a kontrola).
+        \item \textit{Hybridní cloud:} Kombinace obou přístupů – citlivá data v privátním cloudu, zbytek ve veřejném.
+        \item \textit{Multi-cloud:} Využívání služeb od více poskytovatelů najednou (např. AWS i Azure), aby se předešlo závislosti na jednom dodavateli (vendor lock-in).
+    \end{itemize}
+\end{itemize}
+
+\section{Webové služby a mikroslužby}
+\begin{quote}
+    \textbf{význam SOA, WS a mikroslužeb. Principy SOAP vs REST, XML a JSON. Nástroje na tvorbu mikroslužeb}
+\end{quote}
+
+\subsection{SOA (Service-Oriented Architecture)}
+Architektura orientovaná na služby (SOA) je přístup k návrhu podnikového softwaru, kde jsou systémy tvořeny nezávislými, znovupoužitelnými službami. Tyto služby poskytují specifickou business funkcionalitu (např. ověření bonity klienta, fakturace) a komunikují spolu přes síť pomocí standardizovaných protokolů. 
+
+\paragraph*{Klíčové koncepty:}
+\begin{description}
+    \item[Služba (Service):] Samostatný logický celek, který funguje jako "černá skříňka". Okolní systémy neznají její vnitřní implementaci, znají pouze její veřejné rozhraní (kontrakt).
+    \item[ESB (Enterprise Service Bus):] Centrální komunikační sběrnice. Služby v SOA typicky nekomunikují bod-bod (napřímo), ale všechny se připojují na centrální ESB. Sběrnice zajišťuje směrování zpráv, transformaci formátů (např. z XML starého systému do JSON moderního) a zabezpečení.
+    \item[Volná vazba (Loose Coupling):] Služby jsou navrženy tak, aby na sobě byly co nejméně závislé. Změna v jedné službě by neměla vyžadovat změny ve službách ostatních.
+\end{description}
+
+\paragraph*{Výhody a nevýhody:}
+\begin{itemize}
+    \item \textbf{Výhody:} Vysoká míra znovupoužitelnosti napříč celým podnikem. Skvělé pro integraci historických (legacy) systémů s novými aplikacemi.
+    \item \textbf{Nevýhody:} Sběrnice ESB se při velkém nárůstu služeb stává úzkým hrdlem (bottleneck) a centrálním bodem selhání (SPOF - Single Point Of Failure). Komunikace přes těžkopádné protokoly (tradičně SOAP a XML) generuje velkou režii.
+\end{itemize}
+
+\paragraph*{Rozdíl mezi SOA a Mikroslužbami:}
+Ačkoliv oba přístupy dělí systém na menší části, mají odlišnou filozofii:
+\begin{itemize}
+    \item \textbf{Rozsah a cíl:} SOA se snaží integrovat různé systémy v rámci \textit{celého podniku} (Enterprise level). Mikroslužby se naopak používají pro rozdělení \textit{jedné konkrétní aplikace} (Application level).
+    \item \textbf{Způsob komunikace:} SOA spoléhá na "chytrou sběrnici" (Smart ESB), která obsahuje spoustu směrovací logiky. Mikroslužby využívají "hloupé roury" (Dumb pipes – např. REST API nebo jednoduché fronty zpráv) a veškerou chytrou logiku si drží uvnitř samotné služby.
+    \item \textbf{Datová vrstva:} Služby v SOA velmi často přistupují ke sdílené obří podnikové databázi. Správně navržená mikroslužba by měla mít vždy svou vlastní, izolovanou databázi.
+\end{itemize}
+
+\subsection{WS (Web Services)}
+Webové služby představují standardizovaný způsob integrace aplikací nezávisle na jejich platformě a programovacím jazyce (např. systém v Javě komunikuje se systémem v .NET). Tradiční WS jsou postaveny na standardech organizace W3C a komunikují výhradně pomocí XML.
+
+\newpage
+\paragraph*{Základní stavební kameny:}
+\begin{description}
+    \item[SOAP (Simple Object Access Protocol):] Komunikační protokol. Definuje formát zprávy zvaný \textit{SOAP Envelope} (obálka), která obsahuje hlavičku pro metadata (bezpečnost, transakce) a tělo pro samotná byznysová data.
+    \item[WSDL (Web Services Description Language):] Detailní a striktní popis rozhraní (kontrakt) ve formátu XML. Přesně definuje, jaké operace (metody) služba nabízí a jaké datové typy přijímá a vrací. 
+    \item[UDDI (Universal Description, Discovery, and Integration):] Adresář, do kterého mohou být služby registrovány, aby je ostatní systémy mohly dynamicky vyhledat. (V dnešní praxi se již téměř nepoužívá, ale je součástí definice).
+\end{description}
+
+\paragraph*{Srovnání Web Services (SOAP) vs. REST API:}
+\begin{itemize}
+    \item \textbf{Formát dat:} WS používá striktně XML. REST může používat cokoliv, nejčastěji odlehčený JSON.
+    \item \textbf{Přístup:} WS je orientováno na \textit{akce/operace} (např. metoda \texttt{ZalozUcet()}). REST je orientován na \textit{zdroje/entity} a využívá standardní HTTP metody (POST na entitu \texttt{/ucet}).
+    \item \textbf{Kontrakt a typování:} WS má striktní smlouvu (WSDL). Kód se z WSDL generuje automaticky. REST je volnější (i když dnes využívá např. standard OpenAPI/Swagger pro dokumentaci).
+    \item \textbf{Výkon a režie:} Zprávy ve WS jsou kvůli struktuře XML mnohem větší a náročnější na zpracování. REST je mnohem rychlejší a vhodnější pro web a mobilní zařízení.
+\end{itemize}
+
+\subsection{Mikroslužby}
+\label{sub:mikrosluzby2}
+\begin{quote}
+    \textbf{Předchozí kapitola:} \hyperref[sub:mikrosluzby]{Mikroslužby}
+\end{quote}
+Každá služba zajišťuje jednu konkrétní funkcionalitu. Nejčastěji se využívá REST API ke komunikaci.
+Usnadňují škálování, vývoj, nasazení. Jsou odolnější vůči výpadku a dovolují využití různých
+technologií.
+
+\subsection{SOAP vs REST}
+Výhodou SOAP je robustnostnost a standardizace na druhé straně REST je jednoduchý a flexibilní.
+SOAP se typicky používá v rámci SOA pro složité a formálně definované webové služby.
+REST nepoužívá žádný specifický protokol, ale staví na principu http.
+
+\begin{description}
+    \item[SOAP] -- Simple Object Access Protocol
+    \item[REST] -- Representational State Transfer
+\end{description}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Vlastnost} & \textbf{SOAP} & \textbf{REST} \\ \hline
+\textit{Protokol} & Vlastní protokol (nad HTTP/SMTP) & Architektonický styl nad HTTP \\ \hline
+\textit{Formát zpráv} & Pouze XML & JSON, XML, HTML, text \\ \hline
+\textit{Stavovost} & Může být stavový i bezstavový & Striktně bezstavový (Stateless) \\ \hline
+\textit{Bezpečnost} & WS-Security (vysoká, na úrovni zprávy) & HTTPS (na úrovni transportu) \\ \hline
+\textit{Výkon} & Nižší (režie XML obálky) & Vysoký (minimalistický přenos) \\ \hline
+\textit{Definice} & WSDL (striktní kontrakt) & OpenAPI/Swagger (dokumentace) \\ \hline
+\end{tabular}
+\end{table}
+
+\paragraph*{Srovnání datových formátů (XML vs. JSON):}
+
+\begin{description}
+    \item[XML (eXtensible Markup Language):] 
+    Jazyk založený na značkách (tagy). Je hierarchický a velmi ukecaný.
+    \begin{itemize}
+        \item \textbf{Silné stránky:} Podpora schémat (XSD) pro validaci dat, podpora jmenných prostorů (namespaces), samopopisné značky.
+        \item \textbf{Slabé stránky:} Velký objem dat (nadbytečné tagy), složitější parsování pro prohlížeče a mobilní zařízení.
+    \end{itemize}
+
+    \item[JSON (JavaScript Object Notation):] 
+    Odlehčený formát založený na párech klíč–hodnota.
+    \begin{itemize}
+        \item \textbf{Silné stránky:} Minimální režie (malá velikost souborů), extrémně rychlé parsování v JavaScriptu, snadná čitelnost pro člověka.
+        \item \textbf{Slabé stránky:} Chybí nativní podpora pro metadata a složité datové typy (např. datum je často jen řetězec), méně robustní validace oproti XSD.
+    \end{itemize}
+\end{description}
+
+\paragraph*{Kdy co zvolit?}
+\begin{itemize}
+    \item \textbf{SOAP + XML:} Bankovní systémy, platební brány, státní správa. Tam, kde je prioritou bezpečnost, transakčnost a kde se rozhraní nemění desítky let.
+    \item \textbf{REST + JSON:} Veřejná API, mobilní aplikace, webové frontendy, mikroslužby. Tam, kde je prioritou rychlost vývoje, snadná konzumace dat a výkon.
+\end{itemize}
+
+\subsection{Nástroje na tvorbu mikroslužeb}
+
+\paragraph*{1. Frameworky:}
+\begin{itemize}
+    \item \textbf{Spring Boot (Java):} Nejpoužívanější framework v korporátní sféře. Nabízí moduly pro snadné vytvoření REST API a integraci s cloudovými službami (Spring Cloud).
+    \item \textbf{Node.js / NestJS (JavaScript/TypeScript):} Populární díky asynchronnímu I/O modelu, což je ideální pro vysoce zatížená komunikační rozhraní.
+    \item \textbf{Go (Golang):} Jazyk od Google navržený přímo pro cloudové služby. Vyniká rychlostí, nízkou spotřebou paměti a skvělou podporou souběžnosti.
+\end{itemize}
+
+\paragraph*{2. Infrastruktura a orchestrace:}
+Mikroslužby by bez automatizované správy nebylo možné provozovat v desítkách či stovkách instancí.
+\begin{itemize}
+    \item \textbf{Docker:} Každá mikroslužba má svůj vlastní kontejner, který obsahuje vše potřebné k běhu.
+    \item \textbf{Kubernetes (K8s):} Stará se o to, aby mikroslužby běžely, automaticky je škáluje při zátěži a restartuje při chybě.
+    \item \textbf{Service Mesh (např. Istio):} Nadstavba nad Kubernetes, která řeší složitou síťovou komunikaci mezi službami (šifrování provozu, řízení toků, sledování latence).
+\end{itemize}
+
+\paragraph*{3. Správa konfigurace a Service Discovery:}
+V dynamickém prostředí se IP adresy služeb neustále mění, proto jsou potřeba nástroje pro jejich nalezení.
+\begin{itemize}
+    \item \textbf{Service Registry (např. Consul, Netflix Eureka):} Telefonní seznam služeb. Každá nově spuštěná služba se zde nahlásí, aby ostatní věděli, kde ji najít.
+    \item \textbf{API Gateway (např. Kong, NGINX):} Jediný vstupní bod pro klienty zvenčí. Směruje požadavky na správné vnitřní mikroslužby, řeší autentizaci a omezování zátěže (rate limiting).
+\end{itemize}
+
+\paragraph*{4. Monitoring a distribuované trasování:}
+Když nastane chyba v řetězci deseti služeb, je těžké ji najít bez specializovaných nástrojů.
+\begin{itemize}
+    \item \textbf{Prometheus \& Grafana:} Nástroje pro sběr a vizualizaci metrik (např. vytížení CPU, počet požadavků za sekundu).
+    \item \textbf{ELK stack (ElasticSearch, Logstash, Kybana):} Sběr, transformace a vizualizace logů.
+    \item \textbf{Jaeger / Zipkin:} Nástroje pro distribuované trasování. Umožňují sledovat cestu jednoho konkrétního požadavku napříč všemi mikroslužbami, kterými prošel.
+\end{itemize}
+
+\section{NoSQL databáze a jejich základní principy}
+\label{sec:nosql}
+\begin{quote}
+    \textbf{škálování, replikace, možnosti distribuce dat, Map\&Reduce, sharding, perzistence dat, zabezpečení, CAP teorém, BASE model}
+\end{quote}
+\hyperref[sub:dv]{Zpět} (Kapitola 4.)
+
+NoSQL (Not Only SQL) databáze vznikly jako reakce na limity tradičních relačních databází při zpracování obrovských objemů nestrukturovaných dat a potřebě horizontálního škálování.
+Upřednostňují výkon dostupnost a flexibilitu před integritou a transakčností.
+Zvládají rychlý zápis a čtení, které by klasické RDBMS nezvládalo.
+
+\subsection{Škálování}
+Škálování je schopnost systému zvládat rostoucí zátěž (počet uživatelů, objem dat) navýšením dostupných prostředků.
+
+\paragraph*{1. Vertikální škálování (Scale-Up)}
+Znamená navýšení výkonu stávajícího serveru - přidání více CPU, RAM nebo rychlejších disků.
+\begin{itemize}
+    \item \textbf{Výhody:} Jednoduchost (aplikace se nemusí měnit, stále běží na jednom stroji), žádná režie na síťovou komunikaci mezi uzly.
+    \item \textbf{Nevýhody:} Existuje pevný hardwarový strop (limit základní desky), každé další navýšení výkonu je extrémně drahé a obvykle vyžaduje odstávku systému pro upgrade.
+\end{itemize}
+
+\paragraph*{2. Horizontální škálování (Scale-Out)}
+Znamená přidávání dalších, levnějších strojů (uzlů) do clusteru. Zátěž se pak rozděluje mezi ně.
+\begin{itemize}
+    \item \textbf{Výhody:} Prakticky neomezený růst, vysoká dostupnost (když jeden uzel selže, ostatní pracují dál), možnost využít levnější hardware.
+    \item \textbf{Nevýhody:} Vyšší komplexnost - systém musí být navržen jako bezstavový (stateless), je nutné řešit synchronizaci dat a použít \textbf{Load Balancer} (rozdělovač zátěže).
+\end{itemize}
+
+\subsection{Replikace a sharding}
+Replikace zajišťuje redundanci dat, a tak existuje v případě ztráty nebo poškození
+záložní kopie. Sharding je rozdělení dat na více uzlů, což je základní princip
+horizontálního škálování.
+
+\paragraph*{1. Replikace}
+Proces udržování stejných dat na více serverech současně.
+\begin{itemize}
+    \item \textbf{Master-Slave (Leader-Follower):} Jeden uzel je hlavní (Master) a přijímá zápisy. Ostatní uzly (Slaves) kopírují jeho data a slouží pouze pro čtení. 
+        \begin{itemize}
+            \item \textit{Výhoda:} Extrémní zrychlení čtení (typické pro weby - hodně se čte, málo píše).
+            \item \textit{Nevýhoda:} Zapisovat múže pouze Master.
+            \item Např. Mongo
+        \end{itemize}
+    \item \textbf{Multi-Master:} Zápis je možný do libovolného uzlu. 
+        \begin{itemize}
+            \item \textit{Výhoda:} Všechny uzly mohou číst i zapisovat.
+            \item \textit{Nevýhoda:} Velmi složité řešení konfliktů (co když dva lidé změní stejný řádek na různých serverech ve stejnou vteřinu).
+            \item Např. Cassandra
+        \end{itemize}
+    \item \textbf{Hlavní přínos:} Vysoká dostupnost (Availability) - když jeden server shoří, data máme jinde.
+    \item \textbf{Synchronní/asynchronní:} Synchronní zápis je potvrzen až po zapsání do všech uzlů. Asynchronní zápis je potvrzen ihned, replikace proběhne později.
+\end{itemize}
+
+\paragraph*{2. Sharding (Horizontální dělení)}
+Rozdělení jedné obří tabulky na několik menších částí (shardy), které jsou fyzicky uloženy na různých serverech. Žádný server pak nemá kompletní kopii všech dat.
+\begin{itemize}
+    \item \textbf{Shard Key:} Klíč (např. ID zákazníka nebo region), podle kterého se určuje, na kterém serveru data leží. Např. uživatelé z Evropy jsou na serveru A, uživatelé z USA na serveru B.
+    \item \textbf{Výhody:} Umožňuje lineární růst databáze. Zápis se rozprostře mezi více strojů, takže neexistuje jeden bottleneck.
+    \item \textbf{Nevýhody:} Velká komplexnost. Dotazy přes více shardů (JOIN) jsou velmi pomalé a náročné na režii.
+\end{itemize}
+
+\paragraph*{Možnosti distribuce dat:}
+Označuje způsob jakým jsou data uložena na více fyzických nebo logických uzlech.
+\begin{itemize}
+    \item \textbf{HashBased} -- Data jsou distribuována podle výstupu hashovací funkce nad klíčem což zajišťuje rovnoměrné rozložení.
+    \item \textbf{RangeBased} -- Data jsou rozdělena podle hodnoty klíče do určitých rozsahů.
+    \item \textbf{Geografická distribuce} Každý uzel je v jiném datacentru nebo geografické oblasti. Ukládá data ze své oblasti.
+\end{itemize}
+
+\subsection{Map\&Reduce}
+MapReduce je programovací model pro distribuované zpracování obrovských objemů dat (BigData) na velkých clusterech. Tento koncept zpopularizoval Google a je základem technologií jako Apache Hadoop.
+
+\paragraph*{Princip fungování:}
+Celý proces je rozdělen do dvou hlavních fází, mezi kterými probíhá automatické míchání dat:
+
+\begin{description}
+    \item[1. Map (Mapování):] Vstupní data jsou rozdělena na menší kusy (případně již jsou uložena na různých uzlech) a každý uzel zpracuje svou část a vygeneruje dvojice \textbf{klíč–hodnota} (key-value pairs).
+    \item[2. Shuffle and Sort (Míchání):] Systém automaticky seskupí všechny hodnoty se stejným klíčem k sobě a pošle je na stejný uzel pro závěrečné zpracování.
+    \item[3. Reduce (Redukce):] Uzly přijmou seskupená data pro daný klíč a provedou agregační operaci (např. součet, průměr, výběr maxima), čímž vznikne finální výsledek.
+\end{description}
+
+\paragraph*{Příklad (Počítání slov - Word Count):}
+Máme miliony dokumentů a chceme zjistit počet výskytů každého slova:
+\begin{itemize}
+    \item \textbf{Map:} Každý stroj čte text a pro každé slovo "ahoj" vytvoří dvojici \texttt{(ahoj, 1)}. (číslo je počet nálezů slova)
+    \item \textbf{Shuffle:} Všechny dvojice \texttt{(ahoj, *)} se "sletí" na jeden konkrétní stroj.
+    \item \textbf{Reduce:} Tento stroj sečte všechny jedničky u klíče "ahoj" a vypíše výsledek \texttt{(ahoj, 1548)}.
+\end{itemize}
+
+\paragraph*{Výhody a technologie:}
+\begin{itemize}
+    \item \textbf{Škálovatelnost:} Stačí přidat další servery a výkon roste lineárně.
+    \item \textbf{Odolnost proti chybám:} Pokud jeden uzel během výpočtu selže, systém jeho práci automaticky přidělí jinému stroji.
+\end{itemize}
+
+\subsection{Perzistence dat a zabezpečení}
+
+
+\paragraph*{Perzistence dat a distribuovaný přístup:}
+Zatímco relační databáze striktně dodržují pravidla ACID (Atomicita, Konzistence, Izolace, Trvalost), distribuované NoSQL databáze se často řídí \textbf{teorémem CAP} (Konzistence, Dostupnost, Odolnost proti rozdělení sítě) a principy \textbf{BASE} (Basically Available, Soft state, Eventual consistency). To znamená, že systém raději upřednostní dostupnost a rychlost před okamžitou konzistencí napříč všemi uzly.
+Mechanismy perzistence v NoSQL lze rozdělit do několika přístupů:
+\begin{itemize}
+    \item \textbf{In-memory s asynchronním zápisem:} Databáze (např. Redis) drží data primárně v operační paměti (RAM) pro maximální rychlost. Perzistence je řešena občasným vytvořením snímku (Snapshotting) na pevný disk nebo průběžným logováním každé operace (Append-Only File).
+    \item \textbf{Write-Ahead Logging (WAL):} Předtím, než se data zapíšou do samotné datové struktury, jsou nejprve sekvenčně zaznamenána do transakčního logu na disku. Tím je zaručeno, že v případě výpadku proudu se data neztratí a systém je z logu obnoví (využívá např. Cassandra nebo MongoDB).
+\end{itemize}
+
+\paragraph*{Zabezpečení:}
+Historicky byly NoSQL databáze navrhovány s primárním důrazem na výkon a škálovatelnost. Předpokládalo se, že poběží v uzavřených a důvěryhodných vnitřních sítích, a proto v počátcích často postrádaly robustní zabezpečení (např. výchozí nastavení nevyžadovalo heslo). Moderní NoSQL systémy však již implementují komplexní bezpečnostní vrstvy:
+
+\begin{itemize}
+    \item \textbf{Autentizace a Authorizace:} Moderní systémy využívají standardní mechanismy pro ověření identity (SCRAM, integrace s LDAP nebo Kerberos). Pro řízení přístupu se standardně používá \textbf{RBAC} (Role-Based Access Control) -- uživatelům nebo aplikacím jsou přidělovány role s přesně definovanými oprávněními (např. pouze čtení z konkrétní kolekce).
+    \item \textbf{Šifrování (Encryption):}
+    \begin{itemize}
+        \item \textbf{In-transit (při přenosu):} Komunikace mezi klientem a databází, stejně jako mezi samotnými uzly v clusteru, je šifrována pomocí TLS/SSL protokolů, aby se zabránilo odposlechu (man-in-the-middle útokům).
+        \item \textbf{At-rest (v úložišti):} Data fyzicky uložená na pevných discích jsou šifrována (např. pomocí standardu AES-256). K datům nelze přistoupit pouhým zkopírováním databázových souborů bez šifrovacího klíče.
+    \end{itemize}
+    \item \textbf{Síťová izolace a Auditing:} Databázové uzly jsou chráněny firewally a přístup k nim je povolen pouze z aplikačních serverů (nikoliv z veřejného internetu). Většina enterprise verzí NoSQL databází navíc podporuje podrobné auditování, které zaznamenává, kdo, kdy a k jakým datům přistupoval.
+\end{itemize}
+
+\subsection{CAP teorém a BASE model}
+Tradiční relační databáze se spoléhají na vlastnosti ACID (Atomicita, Konzistence, Izolace, Trvalost), které zaručují absolutní spolehlivost transakcí. V prostředí obrovských distribuovaných systémů (BigData) je však striktní dodržování ACID velmi náročné na výkon a často nemožné. Proto NoSQL databáze využívají odlišné teoretické modely -- CAP teorém a principy BASE.
+
+\paragraph*{CAP teorém (Brewerův teorém):}
+Tento teorém definuje tři základní vlastnosti distribuovaných systémů. Podle něj může distribuované datové úložiště současně garantovat \textbf{nejvýše dvě} z těchto tří vlastností:
+
+\begin{description}
+    \item[C -- Consistency (Konzistence):] Každý požadavek na čtení vrátí buď nejnovější zapsaná data, nebo chybu. Všichni uživatelé vidí v daný okamžik naprosto stejná data, nezávisle na tom, ke kterému uzlu (serveru) jsou připojeni.
+    \item[A -- Availability (Dostupnost):] Každý požadavek, který systém přijme, dostane platnou odpověď (bez chybové hlášky). Není ale zaručeno, že tato odpověď obsahuje nejnovější verzi dat.
+    \item[P -- Partition Tolerance (Odolnost proti rozdělení sítě):] Systém nadále funguje i v případě, že dojde k výpadku komunikace (rozdělení sítě) mezi jednotlivými uzly.
+\end{description}
+
+\textbf{Volba v praxi:} Ačkoliv se často říká, že si \uv{vybíráme dvě ze tří}, v reálném světě jsou výpadky sítě (P) nevyhnutelné. Distribuovaný systém proto \textit{musí} být odolný proti rozdělení (Partition Tolerant). Skutečná volba při návrhu NoSQL databáze tedy spočívá v tom, co systém udělá při výpadku sítě:
+\begin{itemize}
+    \item \textbf{CP systémy (Konzistence + Odolnost):} Při výpadku sítě systém raději odmítne odpovědět (obětuje dostupnost), aby nevrátil zastaralá data (např. MongoDB, HBase).
+    \item \textbf{AP systémy (Dostupnost + Odolnost):} Systém odpoví vždy, i za cenu, že klientům pošle starší data, protože uzly se nestihly synchronizovat (např. Cassandra, CouchDB).
+\end{itemize}
+
+\paragraph*{Model BASE:}
+Zatímco ACID je model pro relační databáze, NoSQL databáze (zejména ty typu AP) se řídí modelem BASE. Jde o akronym tří konceptů, které upřednostňují dostupnost před okamžitou konzistencí:
+
+\begin{description}
+    \item[BA -- Basically Available (Základní dostupnost):] Systém garantuje vysokou dostupnost dat. I když selže jeden uzel nebo část sítě, databáze jako celek stále odpovídá na požadavky uživatelů.
+    \item[S -- Soft state (Měkký/proměnlivý stav):] Vzhledem k chybějící garanci okamžité konzistence se stav systému může měnit v čase, a to i v případě, že nepřicházejí žádné nové požadavky na zápis (uzly se totiž synchronizují asynchronně na pozadí).
+    \item[E -- Eventual consistency (Konečná konzistence):] Systém negarantuje, že data budou konzistentní okamžitě po zápisu. Garantuje však, že pokud do systému přestanou přicházet nové zápisy, po uplynutí určité doby se všechny uzly zkoordinují a data budou napříč systémem konzistentní.
+\end{description}
+
+\section{Data v distribuovaných systémech} 
+\begin{quote}
+    \textbf{BigData a jejich zdroje, dataset a jeho životní cyklus, otevřená data, trend velkých datasetů, 5V, typy BigData a datové formáty, problémy BigData}
+\end{quote}
+
+\subsection{BigData}
+Velké, rychle vznikající různorodé objemy dat, které není možné efektivně zpracovávat tradičními metodami a nástroji.
+Typicky několik TB až PB. Ve skutečnosti neexistuje pevná definice toho, co jsou
+BigData, jedná se o buzzword, pojem se stále vyvíjí, rychle se mění.
+
+\begin{quote}
+    \textbf{Gartner:} „BigData“ jsou informační zdroje charakterizované velkým objemem, vysokou rychlostí a/nebo velkou rozmanitostí,
+které vyžadují nové způsoby zpracování, aby umožnily lepší rozhodování, získávání poznatků a optimalizaci procesů.
+\end{quote}
+
+\subsubsection{Zdroje:}
+\begin{itemize}
+    \item Senzory a IoT zařízení
+    \item Web a mobilní aplikace -- logy, pohyby myší, interakce, data o chování 
+    uživatelů
+    \item Sociální sítě -- texty, obrázky, videa
+    \item Finanční a obchodní transakce -- platby, objednávky, interakce v eshopu
+    \item Veřejné zdroje a otevřená data
+    \item Zdravotnictví a biomedicína
+    \item Multimediální obsah
+\end{itemize}
+
+\subsection{Dataset}
+
+Dataset (datová sada) je strukturovaná kolekce souvisejících dat, obvykle uspořádaná do tabulkové podoby (kde řádky reprezentují jednotlivé záznamy a sloupce jejich atributy), případně do podoby textových korpusů, grafů či složek s multimédii. Technicky jsou datasety uloženy v různých formátech, od jednoduchých souborů (CSV, JSON) až po komplexní relační či NoSQL databáze.
+
+\subsubsection*{Životní cyklus datasetu}
+Práce s daty se řídí procesem, který pokrývá jejich existenci od vzniku po zánik. Hlavní fáze zahrnují:
+\begin{itemize}
+    \item \textbf{Sběr (monitoring, scraping):} Získávání surových dat z různých zdrojů (uživatelské vstupy, senzory, web scraping, logy aplikací).
+    \item \textbf{Organizace:} Organizace dat do datasetu. Řeší se například jmenné konvence, čištění, předspracování.
+    \item \textbf{Ukládání:} Zabezpečené uložení dat do databází nebo jiným způsobem.
+    \item \textbf{Prohledávání:} Průzkum dat například dotazy nad databází.
+    \item \textbf{Sdílení:} Sdílení dat ostatním, např. registry otevřených dat.
+    \item \textbf{Analýza a využití:} Vytěžování informací (Data Mining), podpora rozhodování (BI) nebo trénování modelů strojového učení (ML). Např. Grafana, Dataprep.
+    \item \textbf{Vizualizace:} Prezentace výsledků získaných z dat. Např. dashboardy (Datastudio).
+    \item \textbf{Archivace či zničení:} Odložení historických dat z důvodu úspory drahého úložiště nebo bezpečné smazání dat na základě legislativních požadavků (např. expirace souhlasu dle GDPR).
+\end{itemize}
+
+\subsection{Otevřená data (Open Data)}
+Otevřená data jsou informace a datasety bezplatně zpřístupněné veřejnosti k volnému využití (bez licenčních či autorských omezení). Aby data byla skutečně ,,otevřená'', musí být publikována ve \textbf{strojově čitelném formátu} (např. CSV nebo XML, nikoliv skenovaný obrázek v PDF) a nesmí být vázána na proprietární software.
+Cílem otevřených dat je podpora transparentnosti (např. veřejné rozpočty, jízdní řády v Národním katalogu otevřených dat v ČR) a podpora inovací, neboť na nich mohou nezávislí vývojáři stavět nové služby a aplikace.
+\href{https://5stardata.info/cs/}{Web} na vysvětlení úrovní.
+
+\subsection{Trend velkých datasetů (BigData)}
+V současnosti čelíme exponenciálnímu nárůstu produkce dat. Zpracování velkých 
+datasetů vyžaduje využití cloudu a distribuovaných výpočetních systémů 
+(např. Apache Hadoop, Spark). Obrovské datasety jsou v současnosti naprosto 
+klíčové pro trénování modelů umělé inteligence, což však přináší i nové výzvy v 
+oblasti kvality dat, biasu (zaujatosti) a ochrany soukromí. Data se také stala komoditou.
+\begin{itemize}
+\item Spojování malých datasetů do velkých.
+\item Vyšší nároky na výkon DB.
+\item Objevení i zdánlivě neexistujících korelací.
+\item Killer-feature pro business intelligence!
+\item Klíčovými aspekty platformy BigData jsou integrace, analýzy, vizualizace a zabezpečená správa.
+\end{itemize}
+
+\subsection{Koncept 5V}
+Původní charakteristika velkých dat (Volume, Velocity, Variety) se dnes standardně rozšiřuje o další dvě dimenze (Veracity, Value), které definují úspěšnost práce s BigData:
+\begin{itemize}
+    \item \textbf{Volume (Objem):} Obrovské množství dat (terabyty až petabyty), které již nelze zpracovat na běžných počítačích či v tradičních databázích.
+    \item \textbf{Velocity (Rychlost):} Nutnost data sbírat a analyticky zpracovávat v reálném čase (např. IoT senzory, detekce bankovních podvodů).
+    \item \textbf{Variety (Rozmanitost):} Drtivá většina moderních dat je nestrukturovaná (obrázky, videa, příspěvky ze sociálních sítí, audio nahrávky).
+    \item \textbf{Veracity (Věrohodnost/Pravdivost):} Týká se kvality a spolehlivosti dat. Při obrovských objemech data často obsahují šum, nekonzistence, duplicity nebo chyby. Pokud je špatný vstup, je špatný i výstup analýzy. Popisuje reálnou shodu s fakty a přesností.
+    \item \textbf{Value (Hodnota):} Data sama o sobě nemají žádnou cenu. Hodnota představuje schopnost vytěžit z masivních datasetů užitečné znalosti, které přinesou byznysovou výhodu nebo zefektivní procesy.
+\end{itemize}
+
+\subsection{Typy BigData a datové formáty}
+Z hlediska formálního uspořádání dělíme data do tří základních kategorií:
+\begin{itemize}
+    \item \textbf{Strukturovaná data:} Mají přesně definovaný datový model a schéma. Lze je snadno ukládat a dotazovat pomocí SQL. \textit{Formáty: CSV, tabulky v relačních databázích (MySQL, PostgreSQL).}
+    \item \textbf{Polostrukturovaná data:} Nemají rigidní tabulkovou strukturu, ale obsahují hierarchii, klíče nebo značky (tagy) pro oddělení datových prvků. \textit{Formáty: JSON, XML, YAML (typické pro webová API a NoSQL databáze).}
+    \item \textbf{Nestrukturovaná data:} Tvoří zhruba 80~\% všech moderních dat. Nemají předem definovaný model a nelze je snadno tabulkově prohledávat. Analýza často vyžaduje nástroje umělé inteligence. \textit{Příklady: textové dokumenty (PDF), e-maily, obrázky (JPEG), video (MP4), audio stopy.}
+\end{itemize}
+
+\subsection{Problémy BigData}
+\begin{itemize}
+    \item \textbf{Ukládání a škálování:} Není možné využívat centrální servery. Nutnost horizontálního škálování (distribuované systémy a cloudy), což razantně zvyšuje složitost architektury. Pro dotazování v databázi: cacheování, indexace
+    \item \textbf{Integrace dat:} Obtížné propojování dat (Data Integration) z izolovaných systémů (tzv. datová sila), které navíc využívají zcela odlišné formáty a struktury.
+    \item \textbf{Bezpečnost a ochrana soukromí:} Velká úložiště jsou lákavým cílem kyberútoků. Sběr osobních dat naráží na přísnou legislativu (GDPR), což vyžaduje spolehlivou anonymizaci či pseudonymizaci.
+    \item \textbf{Výkon a latence:} IoT zařízení mají nízký výkon. Neustálý přenos dat po síti může síť přetížit. Nutná optimalizace přenosu.
+\end{itemize}
+
+\newpage
+
+\section{Struktura a architektura systému UNIX / GNU / Linux}
+\begin{quote}
+    \textbf{struktura systému, systém souborů, systém procesů, služby OS, shelly, příkazy shellu, popis jádra, datové struktury jádra, systém vyrovnávací paměti, subsystém V/V, správa paměti, operační systémy reálného času (základní charakteristika, hlavní faktury, definice, hard a soft RTOS, RMS, EDF, příklady RTOS)}
+\end{quote}
+\begin{itemize}
+    \item \textbf{UNIX:} Komerční operační systém vytvořený v 70. letech v Bellových laboratořích (AT\&T). Přinesl revoluční myšlenky: víceúlohovost (multitasking), víceuživatelský přístup a filozofii ,,vše je soubor''. Původní kód UNIXu je uzavřený (proprietární) a dnes z něj vycházejí např. systémy macOS nebo FreeBSD.
+    \item \textbf{GNU (GNU's Not Unix):} Projekt založený v roce 1983 (Richard Stallman) s cílem vytvořit svobodný (open-source) operační systém, který by se choval jako UNIX, ale neobsahoval jeho komerční kód. Projekt vytvořil klíčové uživatelské nástroje (příkazový řádek bash, překladač GCC, základní utility), ale chybělo mu funkční jádro.
+    \item \textbf{Linux:} Jádro (kernel) operačního systému, které v roce 1991 napsal Linus Torvalds.
+    Spojením jádra \textbf{Linux} a uživatelských nástrojů \textbf{GNU} vznikl plně funkční a svobodný operační systém, který se dnes zkráceně, označuje jako ,,Linux'' (správně by mělo být GNU/Linux).
+\end{itemize}
+
+
+\subsection{Struktura systému}
+Linux využívá monolitické jádro a striktně odděluje práva hardwaru a běžných uživatelů. Architektura se dělí do několika vrstev:
+\begin{itemize}
+    \item \textbf{Hardware:} Fyzické komponenty (CPU, RAM, disky, síťové karty).
+    \item \textbf{Jádro (Kernel Space):} Běží v privilegovaném režimu. Řídí přístup k hardwaru, spravuje paměť, plánuje procesorový čas pro aplikace a obsahuje ovladače zařízení. Jádro je program, který je zaveden po zapnutí počítače do operační paměti.
+    \item \textbf{Systémová volání (System Calls):} Rozhraní (API) mezi jádrem a uživatelským prostorem. Pokud chce běžná aplikace zapsat soubor na disk, nesmí sáhnout přímo na HW, ale musí o to požádat jádro právě přes systémové volání.
+    \item \textbf{Uživatelský prostor (User Space):} Neprivilegovaný režim, ve kterém běží knihovny (např. glibc), příkazový interpret (Shell), služby na pozadí (démoni), grafické prostředí (X11/Wayland) a samotné uživatelské aplikace.
+\end{itemize}
+
+\subsection{Systém souborů (File System)}
+Základním principem je, že \textbf{,,vše je soubor''} - jako soubor se v Linuxu tváří textové dokumenty, složky, ale i hardwarová zařízení (např. pevný disk jako \texttt{/dev/sda}).
+\begin{itemize}
+    \item \textbf{Hierarchie:} Vše vychází z jednoho kořenového adresáře označovaného lomítkem (\texttt{/}), další disky se připojují (mountují) do prázdných složek v rámci této jedné hierarchie.
+    \item \textbf{I-uzly (I-node):} Datová struktura, která nese metadata o souboru (vlastník, velikost, přístupová práva, časy modifikace, typ souboru a hlavně ukazatele na fyzické bloky na disku, kde jsou data skutečně uložena). I-uzel neobsahuje název souboru - ten je uložen pouze v adresáři.
+    \item \textbf{Odkazy (Linky):}
+    \begin{itemize}
+        \item \textit{Tvrdý odkaz (Hard link):} Více názvů souborů ukazuje na stejný i-uzel. Data se smažou z disku až po smazání posledního tvrdého odkazu.
+        \item \textit{Symbolický odkaz (Symlink):} Obdoba zástupce ve Windows. Soubor, který obsahuje pouze cestu k jinému souboru.
+    \end{itemize}
+    \item \textbf{Oprávnění:} Každý soubor má vlastníka (User) a skupinu (Group). Práva se dělí na čtení (\texttt{r}), zápis (\texttt{w}) a spouštění (\texttt{x}) pro vlastníka, skupinu a všechny ostatní (Others).
+\end{itemize}
+\subsubsection*{Základní typy souborů}
+\label{prg:typysoub}
+\begin{itemize}
+    \item \textbf{Běžný soubor} (značí se pomlčkou \texttt{-}): Nejobvyklejší typ. Patří sem textové dokumenty, zdrojové kódy, obrázky, komprimované archivy i spustitelné binární programy.
+    \item \textbf{Adresář} (značí se \texttt{d} - Directory): Z pohledu jádra jde o \textit{speciální soubor}, který neobsahuje běžná data, ale pouze tabulku. V této tabulce jsou zapsány názvy souborů (které se v adresáři nacházejí) a k nim přiřazená čísla i-uzlů.
+    \item \textbf{Symbolický odkaz} (značí se \texttt{l} - Link): Soubor obsahující pouze textovou cestu k jinému cílovému souboru (obdoba zástupce).
+    \item \textbf{Soubory zařízení (Device files):} Slouží k přímé komunikaci s hardwarem. Nacházejí se typicky ve složce \texttt{/dev}. Dělí se na dva druhy:
+    \begin{itemize}
+        \item \textit{Znaková zařízení (značí se \texttt{c} - Character):} Přenáší data znak po znaku (proud bajtů) bez vyrovnávací paměti. Např. klávesnice, myš, terminál.
+        \item \textit{Bloková zařízení (značí se \texttt{b} - Block):} Přenáší data ve větších blocích (např. 4 KB) přes vyrovnávací paměť. Např. pevné disky (\texttt{/dev/sda}) nebo USB flash disky.
+    \end{itemize}
+    \item \textbf{Pojmenovaná roura} (značí se \texttt{p} - Pipe / FIFO): Speciální soubor sloužící k jednosměrné komunikaci mezi dvěma nezávislými procesy.
+    \item \textbf{Soket} (značí se \texttt{s} - Socket): Speciální soubor umožňující obousměrnou pokročilou komunikaci mezi procesy, a to lokálně nebo přes síť.
+\end{itemize}
+Zpět na \hyperref[prg:vv]{subsystém V/V}.
+
+\subsection{Systém procesů}
+Proces je běžící instance programu. Linux je plně víceúlohový, takže procesor přepíná mezi stovkami procesů (Context switching).
+Všechny porcesy jsou zapsány v tabulce procesů.
+\begin{itemize}
+    \item \textbf{Atributy procesu:} Každý proces má unikátní identifikátor \textbf{PID} (Process ID), identifikátor rodiče \textbf{PPID} (Parent PID) a práva uživatele (\textbf{UID} - uživatel, \textbf{GID} - skupina), který jej spustil.
+    \item \textbf{Vznik procesu:} Vytvoření nového procesu probíhá ve dvou krocích. Voláním \texttt{fork()} vytvoří rodičovský proces svou přesnou kopii (potomka). Potomek následně použije volání \texttt{exec()}, kterým svůj obsah nahradí novým programem.
+    \item \textbf{Init proces (systemd):} První proces spuštěný při startu jádra. Má vždy \textbf{PID 1} a je přímým nebo nepřímým rodičem všech ostatních procesů v systému.
+    \item \textbf{Meziprocesová komunikace (IPC):} Procesy si mohou vyměňovat data nebo se synchronizovat. Využívají se k tomu \textit{roury} (Pipes - znak \texttt{|}, přesměrování výstupu jednoho programu na vstup dalšího), signály (např. \texttt{SIGKILL} pro okamžité ukončení procesu) nebo sdílená paměť.
+    \item \textbf{/proc souborový systém:} Pseudo-souborový systém poskytující rozhraní k interním údajům o běžících procesech a systému. (\texttt{/proc/cpuinfo} - informace o CPU, \texttt{/proc/meminfo}, \texttt{/proc/uptime})
+\end{itemize}
+\subsubsection*{Stavy procesů}
+\label{prg:stavy}
+\begin{itemize}
+    \item Běžící nebo připravený běžet
+    \item Spící připravený na probuzení signálem
+    \item Čeká bez možnosti přerušení signálem
+    \item Zastavený
+    \item Zombie
+\end{itemize}
+\subsubsection*{Datová struktura procesu (\texttt{task\_struct})}
+\label{prg:taskstruct}
+V jádře Linuxu je každý proces (i vlákno) interně reprezentován  strukturou zvanou \textbf{\texttt{task\_struct}}. Jádro si tyto struktury udržuje v paměti a obsahuje v nich naprosto vše, co o procesu potřebuje vědět:
+
+\begin{itemize}
+    \item \textbf{Stav procesu:} \hyperref[prg:stavy]{Stavy procesu} 
+    \item \textbf{Identifikátory:} \texttt{pid} (číslo procesu), \texttt{tgid} (číslo skupiny vláken) a údaje o vlastníkovi (UID/GID) pro ověření oprávnění.
+    \item \textbf{Rodokmen:} Ukazatele na rodičovský proces (\texttt{parent}) a seznam potomků (\texttt{children}).
+    \item \textbf{Správa paměti (\texttt{mm\_struct}):} Odkaz na datovou strukturu definující virtuální adresní prostor procesu (kde má proces kód, data a zásobník).
+    \item \textbf{Otevřené soubory (\texttt{files\_struct}):} Tabulka tzv. \textit{file deskriptorů} (ukazatele na konkrétní soubory, roury či síťové sokety, které má proces zrovna otevřené).
+    \item \textbf{Plánování a kontext CPU:} Priorita procesu a paměťový prostor, kam jádro uloží stavy registrů procesoru při přepínání úloh (Context Switch). Číselné statistiky např. kolik času strávil v uživatelském / jadru. Také \texttt{thread\_info} s informacemi o kontextu při přepínání vláken.
+\end{itemize}
+Zpět na \hyperref[prg:datastructs]{Datové struktury jádra}.
+
+\subsection{Služby OS}
+Služby operačního systému jsou základní softwarové funkce, které zajišťují chod počítače, správu hardwaru a poskytují prostředí pro spouštění aplikací.
+\begin{itemize}
+    \item Správa procesů
+    \item Správa paměti
+    \item Správa souborového systému
+    \item Správa zařízení
+    \item Správa uživatelů a práv
+    \item Síťové služby
+    \item Synchronizace a komunikace mezi procesy
+    \item Cachování diskového přístupu
+    \item Virtuální paměť se stránkováním do tzv. odkládacího prostoru swap space
+    \item Ukládání obsahu paměti na disk core dump
+    \item Pravý hardwarový paralelismus
+    \item Stránkování na vyžádání
+\end{itemize}
+
+\subsection{Shelly}
+
+\textbf{Shell} (příkazový interpret, skutečný programovací jazyk) je textové uživatelské rozhraní k OS. Čte příkazy zadané uživatelem (nebo ze skriptu), interpretuje je a spouští příslušné programy.
+
+\subsubsection*{Běžné typy shellů}
+\begin{itemize}
+    \item \textbf{sh (Bourne shell):} Historický základ, původní shell systému UNIX.
+    \item \textbf{bash (Bourne Again shell):} Výchozí a nejrozšířenější shell ve většině linuxových distribucí.
+    \item \textbf{zsh, fish, csh, a další:} Moderní shelly s pokročilým našeptáváním, obarvováním syntaxe a bohatými možnostmi přizpůsobení.
+\end{itemize}
+
+\subsubsection*{Typy příkazů}
+\begin{itemize}
+    \item \textbf{Interní (vestavěné) příkazy:} Jsou přímou součástí samotného shellu. Při jejich spuštění nevzniká nový proces. Příklad: \texttt{cd} (změna adresáře), \texttt{echo}, \texttt{export} (nastavení proměnné).
+    \item \textbf{Externí příkazy:} Jsou to samostatné binární soubory uložené na disku. Shell je hledá v adresářích definovaných v systémové proměnné \textbf{\texttt{\$PATH}}. Při spuštění shell vytvoří nový proces (přes \texttt{fork} a \texttt{exec}). Příklad: \texttt{ls}, \texttt{grep}, \texttt{cat}.
+\end{itemize}
+
+\subsubsection*{Standardní proudy a přesměrování}
+Každý spuštěný proces v Linuxu má automaticky otevřené tři datové proudy (soubory): \textbf{stdin} (0 - standardní vstup, typicky klávesnice), \textbf{stdout} (1 - standardní výstup, obrazovka) a \textbf{stderr} (2 - chybový výstup, obrazovka). Shell s nimi umí manipulovat:
+\begin{itemize}
+    \item \textbf{Přesměrování výstupu:} Znak \texttt{>} (uloží výstup do souboru, původní obsah přepíše), znaky \texttt{$>>$} (připojí výstup na konec souboru).
+    \item \textbf{Roury (Pipes):} Znak \texttt{|}. Propojuje procesy – standardní výstup prvního příkazu se stává standardním vstupem druhého (např. \texttt{ls -l | grep "txt"} vypíše jen soubory obsahující "txt").
+\end{itemize}
+
+\subsubsection*{Přehled nejpoužívanějších příkazů}
+\begin{itemize}
+    \item \textbf{Práce se soubory/adresáři:} \texttt{ls} (výpis), \texttt{cd} (změna složky), \texttt{pwd} (aktuální cesta), \texttt{cp} (kopírování), \texttt{mv} (přesun/přejmenování), \texttt{rm} (mazání).
+    \item \textbf{Zpracování textu:} \texttt{cat} (výpis obsahu souboru), \texttt{grep} (filtrování textu dle vzoru/regexu), \texttt{less} (stránkování textu).
+    \item \textbf{Správa procesů:} \texttt{ps} (výpis běžících procesů), \texttt{top} / \texttt{htop} (interaktivní sledování zátěže), \texttt{kill} (zaslání signálu procesu, typicky pro ukončení).
+    \item \textbf{Oprávnění:} \texttt{chmod} (změna práv r/w/x), \texttt{chown} (změna vlastníka).
+\end{itemize}
+
+\subsection{Jádro OS}
+Jádro (neboli kernel) je programové vybavení, které pracuje
+na počítači bez jakékoliv další programové podpory, představuje množinu obslužných programů trvale
+umístěných v paměti, k nimž má každý proces přístup,
+základem operačního systému a odpovídá za správu všech hardwarových prostředků počítače, jako jsou disky, síťová
+rozhraní atd.
+Je velkým rozhraním mezi uživatelem a technickým
+vybavením počítače.
+Udržuje a podporuje v činnosti systém souborů a běžící
+procesy.
+\subsubsection*{Popis jádra}
+\begin{itemize}
+    \item \textbf{Monolitická architektura:} Celé jádro (včetně většiny ovladačů a souborových systémů) běží v jednom velkém paměťovém bloku. To zajišťuje maximální výkon.
+    \item \textbf{LKM (Loadable Kernel Modules):} Přestože je Linux monolitický, je \textit{modulární}. Ovladače hardwaru lze do běžícího jádra dynamicky nahrávat a odebírat za běhu (příkazy \texttt{modprobe}, \texttt{lsmod}), aniž by bylo nutné systém restartovat.
+\end{itemize}
+
+\subsubsection*{Rozdíl mezi monolitickým jádrem a mikrojádrem}
+Základní rozdíl spočívá v tom, kolik služeb běží v privilegovaném režimu (Kernel Space).
+
+\begin{itemize}
+    \item \textbf{Monolitické jádro (např. Linux):} Všechny služby OS (správa paměti, souborové systémy, ovladače HW) tvoří jeden velký celek a běží v kernel space.
+    \begin{itemize}
+        \item \textit{Výhoda:} Maximální výkon a rychlost (komunikace probíhá přímo v paměti bez režie).
+        \item \textit{Nevýhoda:} Nižší stabilita (chyba nebo zásek v jediném ovladači může způsobit pád celého OS - tzv. Kernel Panic).
+    \end{itemize}
+    
+    \item \textbf{Mikrojádro (např. MINIX, QNX):} V jaderném prostoru běží jen naprosté minimum (plánování CPU, základní paměť a komunikace IPC). Vše ostatní (ovladače, filesystémy) běží odděleně jako běžné uživatelské procesy (v User Space).
+    \begin{itemize}
+        \item \textit{Výhoda:} Extrémní stabilita a bezpečnost (když spadne ovladač síťové karty, systém nepadne, ovladač se jednoduše restartuje).
+        \item \textit{Nevýhoda:} Nižší výkon (velké zdržení a režie kvůli neustálému přepínání kontextu a posílání zpráv mezi procesy).
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Datové struktury jádra}
+\label{prg:datastructs}
+Jádro je napsáno převážně v jazyce C a ke správě systému využívá datové struktury:
+\begin{itemize}
+    \item \textbf{\texttt{task\_struct}:} Záznam o procesu (PCB), viz \hyperref[prg:taskstruct]{předchozí kapitola}.
+    \item \textbf{\texttt{signal\_struct}:} Datová struktura pro správu signálů.
+    \item \textbf{\texttt{inode}:} Datová struktura nesoucí metadata o souboru a ukazatele na datové bloky na disku.
+    \item \textbf{\texttt{page}:} Struktura reprezentující jednu fyzickou stránku operační paměti.
+\end{itemize}
+
+\subsubsection*{Systém vyrovnávací paměti (Cache / Buffers)}
+Operace čtení a zápisu na fyzický disk jsou extrémně pomalé. Jádro proto využívá volnou kapacitu RAM k dočasnému ukládání diskových dat.
+\begin{itemize}
+    \item \textbf{Page Cache (Mezipaměť stránek):} Ukládá samotný obsah souborů, které byly nedávno čteny nebo zapisovány. Pokud uživatel otevře stejný soubor znovu, načte se z RAM.
+    \item \textbf{Buffer Cache:} Slouží k ukládání surových bloků metadat (např. i-uzlů nebo superbloků) z disku. \textit{V moderním Linuxu jsou Page a Buffer cache sjednoceny.}
+    \item \textbf{Dirty pages (Špinavé stránky):} Pokud proces zapíše data do souboru, jádro je zapíše pouze do paměti (stránka se označí jako "špinavá"). Fyzický zápis na disk se zpozdí a provádí se hromadně na pozadí (démon \texttt{pdflush}) pro zvýšení výkonu. Vynutit zápis lze příkazem \texttt{sync}.
+\end{itemize}
+
+\subsubsection*{Subsystém V/V (Vstup / Výstup)}
+\label{prg:vv}
+Komunikace s hardwarem je abstrahována tak, aby s ní mohly procesy pracovat jednotně.
+Zařízení jsou rozdělená na znaková a bloková viz. \hyperref[prg:typysoub]{typy souborů}.
+
+\begin{itemize}
+    \item \textbf{VFS (Virtual File System):} Abstraktní vrstva. Uživatelský program zavolá univerzální systémové volání \texttt{read()} nebo \texttt{write()}. VFS požadavek přijme a předá ho konkrétnímu ovladači (např. pro ext4, NTFS nebo USB flash disk).
+    \item \textbf{Přerušení (Interrupts / SysRQ):} Hardwarová zařízení upozorňují procesor na událost (např. stisk klávesy nebo dokončení čtení z disku) pomocí asynchronního přerušení.
+    \item \textbf{Struktura termios:} Terminálové rozhraní.
+\end{itemize}
+Charakteristika zařízení je obsažena v
+tabulce deskriptorů zařízení a
+zahrnuje:
+\begin{itemize}
+    \item Identifikátor zařízení
+    \item Instrukce zařízení
+    \item Stav zařízení
+    \item Identifikátor procesu, který se zařízením pracuje
+\end{itemize}
+
+\subsubsection*{Správa paměti}
+Linux nevyhrazuje procesům pevnou fyzickou paměť, ale využívá systém \textbf{virtuální paměti}. Každý proces má iluzi, že má k dispozici souvislý, obrovský blok vlastní paměti.
+\begin{itemize}
+    \item \textbf{Stránkování (Paging):} Virtuální paměť i fyzická RAM jsou rozděleny na bloky o stejné velikosti, tzv. \textbf{stránky} (Pages). 
+    \item \textbf{MMU a tabulka stránek:} Hardwarová komponenta procesoru \textbf{MMU} (Memory Management Unit) za běhu překládá virtuální adresy na fyzické adresy pomocí Tabulky stránek, kterou spravuje jádro.
+    \item \textbf{Výpadek stránky (Page Fault):} Pokud se proces pokusí přistoupit k paměti, která momentálně není nahraná ve fyzické RAM, vznikne výpadek. Jádro proces pozastaví, načte chybějící data z disku do RAM a proces obnoví.
+    \item \textbf{Swapping:} Pokud začne docházet fyzická RAM, jádro přesune neaktivní stránky z RAM na pevný disk (do odkládacího oddílu – \textbf{Swap partition}). Jakmile je proces znovu potřebuje, přesunou se zpět. Toto zabraňuje pádu systému, ale výrazně jej zpomaluje.
+\end{itemize}
+
+\subsection{Operační systémy reálného času (RTOS)}
+
+\subsubsection*{Definice a základní charakteristika}
+\paragraph*{Definice:} RTOS je systém, kde správnost výpočtu nezávisí pouze na logickém výsledku, ale striktně i na čase, kdy je výsledek doručen.
+V informatickém pojetí je RTOS
+takový OS, který zaručuje, že je
+každá správná informace ve správný
+čas na správném místě.
+\paragraph*{Charakteristika:} Hlavním cílem RTOS není vysoká celková propustnost (jako u běžných OS typu Windows/Linux), ale absolutní predikovatelnost a determinismus. Systém zaručuje, že kritická operace proběhne do přesně stanoveného časového limitu (tzv. \textit{deadline}).
+
+\subsubsection*{Hard a Soft RTOS}
+Podle následků zmeškání časového limitu (deadline) se RTOS dělí na:
+\begin{itemize}
+    \item \textbf{Hard RTOS (Tvrdý):} Zmeškání limitu představuje fatální selhání systému, které může ohrozit životy nebo majetek (např. vystřelení airbagu v autě, řízení kardiostimulátoru, brzdy vlaku).
+        Ignoruje data která nepřišla včas.
+
+    \textbf{Point-in-time} - do urřitého času (absolutní)
+    \item \textbf{Soft RTOS (Měkký):} Zmeškání limitu nezpůsobí havárii, pouze se sníží kvalita poskytované služby (např. vynechání snímku při streamování videa, VoIP telefonie).
+    
+    \textbf{Delta-time} - za určitý interval (relativní)
+\end{itemize}
+
+\subsubsection*{Hlavní faktory (metriky) RTOS}
+\begin{itemize}
+    \item Minimální latence při reakci na událost
+    \item Minimální latence při přepínání vláken
+    \item Někdy nutnost malých rozměrů (embedded systémy)
+    \item Minimalizace časových okamžiků, kdy je vypnuto přerušení
+    \item Preemptivní plánování založené na prioritách
+    \item Dosažení paralelního běhu pokud možno všech zdrojů
+    \item Podpora vysoce urgentních úloh
+    \item Ochrana před uživateli ztrácí význam (je určen jen pro jednoho uživatele)
+    \item Vyžadovaný mechanizmy synchronizace a komunikace mezi úlohami
+\end{itemize}
+
+\subsubsection*{Plánování v RTOS (RMS a EDF)}
+Běžné OS (např. Linux) využívají plánovače zaměřené na spravedlnost (Fairness). RTOS místo toho využívá algoritmy založené na čase:
+\begin{itemize}
+    \item \textbf{RMS (Rate Monotonic Scheduling):} Algoritmus se statickou prioritou. Pravidlo je jednoduché: čím kratší má úloha periodu opakování (čím častěji se musí spouštět), tím vyšší fixní prioritu od systému dostane.
+    \item \textbf{EDF (Earliest Deadline First):} Algoritmus s dynamickou prioritou. Systém neustále přepočítává priority běžících procesů. Nejvyšší prioritu v daný okamžik dostane ta úloha, jejíž limit pro dokončení (\textit{deadline}) vyprší nejdříve.
+\end{itemize}
+
+\subsubsection*{Příklady RTOS}
+\begin{itemize}
+    \item \textbf{QNX:} Komerční mikrokontrolérový OS, masivně využívaný v automobilovém průmyslu a medicíně.
+    \item \textbf{VxWorks:} Komerční RTOS (např. řídil vozítka Curiosity a Perseverance na Marsu).
+    \item \textbf{FreeRTOS:} Otevřený systém, dnes de facto standard pro malé mikrokontroléry a IoT zařízení.
+    \item \textbf{RT-Linux:} Běžný Linux doplněný o tzv. PREEMPT\_RT patch, který mu dodává vlastnosti RTOS.
+\end{itemize}
+
+\section{Řízení procesů UNIXu}
+\begin{quote}
+    \textbf{vytváření procesu, signály, ukončení procesu, vyvolání jiných procesů, reálné a efektivní UID, změna velikosti procesu, časování procesů, plánování procesů, SysRQ (použití, funkce)}
+\end{quote}
+Každý proces v systému (kromě procesu \texttt{init/systemd} s PID 1) vzniká jako potomek nějakého již existujícího rodičovského procesu.
+
+\subsection{Vytváření procesu (\texttt{fork})}
+\begin{itemize}
+    \item \textbf{Systémové volání \texttt{fork()}:} Když běžící proces (rodič) zavolá \texttt{fork()}, jádro OS vytvoří jeho přesnou kopii (potomka).
+    \item \textbf{Výsledek:} Potomek dostane vlastní unikátní PID, ale zdědí od rodiče otevřené soubory, proměnné i stav paměti. Od okamžiku volání běží oba procesy nezávisle a souběžně.
+    \item \textbf{Návratová hodnota:} Aby program poznal, zda aktuálně běží jako rodič nebo potomek, vrací volání \texttt{fork()} různé hodnoty: 0 se vrátí potomkovi, zatímco rodiči se vrátí PID nového potomka.
+    \item \textbf{Copy-on-Write (CoW):} Z důvodu výkonu se fyzická paměť při \texttt{fork()} ve skutečnosti nekopíruje ihned. Oba procesy sdílejí stejnou paměť, a ta se zkopíruje až v okamžiku, kdy se jeden z nich pokusí data změnit.
+\end{itemize}
+
+\subsubsection*{Vyvolání jiných procesů (\texttt{exec})}
+Volání \texttt{fork()} vytvoří pouze identický klon. Pokud chceme spustit úplně nový program, musíme použít rodinu systémových volání \texttt{exec()} (např. \texttt{execvp}, \texttt{execl}).
+\begin{itemize}
+    \item \textbf{Princip:} \texttt{exec()} nahradí kompletní paměťový prostor (kód, data, zásobník) aktuálního procesu novým programem nahraným.
+    \item \textbf{Zachování PID:} Nový program se spouští v kontextu stávajícího procesu, takže jeho PID zůstává nezměněno.
+    \item \textbf{Vzor \texttt{fork} + \texttt{exec}:} Toto je standardní UNIXový způsob spouštění programů. Rodič (např. shell) zavolá \texttt{fork()} (vznikne klon shellu) a tento klon okamžitě zavolá \texttt{exec()} (klon se přepíše na požadovaný program).
+\end{itemize}
+
+\subsubsection*{Ukončení procesu (\texttt{exit} a \texttt{wait})}
+Proces může skončit normálně (dokončením úkolu) nebo abnormálně (chybou, signálem).
+\begin{itemize}
+    \item \textbf{Systémové volání \texttt{exit()}:} Proces jím oznamuje jádru, že končí. Předává tzv. návratový kód (0~=~úspěch, nenulová hodnota = chyba). Jádro následně uvolní paměť a zavře soubory procesu.
+    \item \textbf{Systémové volání \texttt{wait()}:} Rodičovský proces musí zavolat \texttt{wait()}, aby si od jádra vyzvedl návratový kód svého potomka.
+    \begin{itemize}
+        \item \textbf{Stav Zombie:} Pokud potomek skončí (\texttt{exit}), ale rodič ještě nezavolal \texttt{wait()}, potomek se stává \textit{zombie}. Nezabírá už RAM ani CPU, ale stále blokuje jedno místo v tabulce procesů.
+        \item \textbf{Sirotek (Orphan):} Situace, kdy rodič zemře dříve než potomek. Sirotka převezme proces \texttt{init/systemd}, který po jeho skončení automaticky zavolá \texttt{wait()}.
+    \end{itemize}    
+\end{itemize}
+
+\subsection{Signály}
+Signály jsou formou softwarového přerušení. Slouží k asynchronní komunikaci a řízení procesů (např. upozornění na chybu nebo žádost o ukončení).
+Zachicují se pomocí \texttt{trap}.
+\begin{itemize}
+    \item \textbf{Zpracování signálu:} Když proces obdrží signál, jádro přeruší jeho normální běh. Proces může signál \textit{ignorovat}, \textit{zachytit} (spustit vlastní obslužnou funkci - handler), nebo ponechat \textit{výchozí akci} (typicky okamžité ukončení procesu).
+    \item \textbf{Běžné signály:}
+    \begin{itemize}
+        \item \textbf{\texttt{SIGINT}:} Přerušení z klávesnice (vyvoláno stiskem \texttt{Ctrl+C}). Lze ho zachytit a ignorovat.
+        \item \textbf{\texttt{SIGTERM}:} Slušná žádost o ukončení. Proces má čas si uložit data a korektně se ukončit. (Výchozí chování příkazu \texttt{kill}).
+        \item \textbf{\texttt{SIGKILL}:} Okamžité a brutální zabití procesu přímo jádrem (\texttt{kill -9}). Proces ho \textit{nemůže} zachytit ani ignorovat.
+        \item \textbf{\texttt{SIGSEGV}:} Segmentation fault. Jádro zabíjí proces, protože se pokusil přistoupit do paměti, která mu nepatří.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Reálné a efektivní UID}
+\label{sub:UID}
+V UNIXu/Linuxu je bezpečnost a přístup k souborům založen na identitě uživatele (User ID - UID). Každý běžící proces má s sebou spojeno několik takových identifikátorů:
+\begin{itemize}
+    \item \textbf{Reálné UID (RUID):} Identifikuje skutečného uživatele, který proces spustil. Slouží především pro accounting a k určení, kdo může proces ukončit (např. běžný uživatel může zabít jen procesy se svým vlastním RUID).
+    \item \textbf{Efektivní UID (EUID):} Jádro se na něj dívá při ověřování oprávnění (zda má proces právo číst/zapisovat do daného souboru). Většinou je EUID stejné jako RUID.
+    \item \textbf{SUID (Set-User-ID) bit:} Speciální oprávnění u spustitelných souborů. Pokud běžný uživatel spustí program se SUID bitem (např. příkaz \texttt{passwd} pro změnu hesla), proces získá EUID vlastníka souboru (což je typicky \texttt{root}). Tím proces získá dočasná administrátorská práva pro zápis do systémových souborů, i když RUID zůstává uživatelské.
+    Volá se \texttt{setuid(uid)}.
+\end{itemize}
+Zpět na \hyperref[sub:identita]{Identita uživatele}.
+
+\subsection{Změna velikosti procesu (Správa paměti)}
+Během svého života potřebuje proces často alokovat další paměť pro svá data (tzv. halda - Heap). Zvětšení nebo zmenšení paměťového prostoru procesu se děje na úrovni jádra pomocí systémových volání:
+\begin{itemize}
+    \item \textbf{Systémová volání \texttt{brk()} a \texttt{sbrk()}:} Mění umístění tzv. \textit{program break} (hranice definující konec datového segmentu/haldy procesu). Posunutím hranice nahoru se halda zvětší, posunutím dolů se paměť vrátí systému.
+    \item \textbf{Systémové volání \texttt{mmap()}:} Modernější přístup pro alokaci velkých bloků paměti. Vytváří nová mapování ve virtuálním adresním prostoru procesu (často se používá i pro mapování souborů z disku přímo do RAM).
+\end{itemize}
+\begin{quote}
+        \textbf{Poznámka:} Běžný programátor tato volání nepoužívá přímo, ale využívá knihovní funkce C (např. \texttt{malloc} a \texttt{free}), které na pozadí chytře volají \texttt{brk} nebo \texttt{mmap} podle potřeby.
+\end{quote}
+\paragraph*{Paměťové segmenty procesu:}
+\begin{itemize}
+    \item Textový segment - obsahuje kód programu
+    \item Datový segment - globální a statické proměnné
+    \item Heap (halda) - dynamicky alokovaná paměť
+    \item Stack (zásobník) - lokální proměnné
+\end{itemize}
+
+\subsection{Časování procesů}
+Čas procesoru je rozdělen do epoch. V jedné epoše, každý proces má specifikováno
+časové kvantum vypočteno na jejím začátku. V jedné epoše, proces může využívat své časové
+kvantum po částech. Epocha končí, když všechny běhu schopné
+procesy vyčerpaly svá časová kvanta, kdy jsou
+přepočítána časová kvanta všech procesů (ne
+jenom běhu schopných) a začne nová epocha. Potomek zdědí základní časové kvantum rodiče.
+
+\subsection{Plánování procesů}
+Tři druhy plánování procesů (process scheduling):
+\begin{itemize}
+    \item \textbf{Krátkodobé:} Výběr, kterému z připravených procesů
+bude přidělen procesor, ve všech víceúlohových
+systémech.
+    \item \textbf{Střednědobé:} Výběr, který
+blokovaný nebo připravený proces bude odsunut z
+vnitřní paměti na disk, je-li vnitřní paměti nedostatek
+(swap out, roll out).
+    \item \textbf{Dlouhodobé:} Výběr, která úloha bude spuštěna (aby byl počítač co nejvíce vytížen).
+\end{itemize}
+Protože procesů je více než jader procesoru, musí jádro (komponenta zvaná Plánovač - \textit{Scheduler}) neustále rozhodovat, komu CPU přidělí.
+\begin{itemize}
+    \item \textbf{CFS (Completely Fair Scheduler):} Výchozí plánovač moderního Linuxu (je preemptivní). Snaží se o maximální spravedlnost – modeluje ideální multitasking, kde každý proces dostává spravedlivý podíl výkonu procesoru na základě své váhy (priority).
+    \item \textbf{Hodnota Nice:} V uživatelském prostoru se priorita neřídí přímo, ale tzv. \textit{slušností} (hodnota \texttt{nice}).
+    \begin{itemize}
+        \item Rozsah je od \textbf{-20} (nejvyšší priorita, nejméně slušný) do \textbf{+19} (nejnižší priorita, velmi slušný – pustí ostatní procesy před sebe).
+        \item Výchozí hodnota je 0. Běžný uživatel může hodnotu \texttt{nice} svému procesu pouze zvýšit. Negativní hodnoty může přidělovat pouze \texttt{root}. K úpravám slouží příkazy \texttt{nice} (při spuštění) a \texttt{renice} (za běhu).
+    \end{itemize}
+\end{itemize}
+
+\subsection{SysRq}
+\textbf{SysRq} je kombinace kláves, která umožňuje uživateli posílat nízkoúrovňové příkazy přímo jádru OS. Funguje to i ve chvíli, kdy systém zamrzne, nereaguje nebo nefunguje grafické rozhraní, protože SysRq je obsluhováno přímo ovladačem klávesnice v jádře.
+\begin{itemize}
+    \item \textbf{Použití:} Vyvolává se kombinací \texttt{Alt + SysRq + <příkazové písmeno>}. (V Linuxu musí být funkce nejprve povolena, např. zápisem do \texttt{/proc/sys/kernel/sysrq}). (Měl by se zapínat pouze pokud je to nutné hrozí napadení systému.)
+    \item \textbf{Funkce a mnemotechnická pomůcka REISUB:} Sekvence pro bezpečné a čisté restartování zamrzlého systému (bez poškození souborového systému):
+    \begin{itemize}
+        \item \textbf{R} (Raw): Převezme kontrolu nad klávesnicí od zmrzlého grafického serveru (X11/Wayland).
+        \item \textbf{E} (tErminate): Pošle všem procesům (kromě \texttt{init}) signál \texttt{SIGTERM} (žádost o bezpečné ukončení).
+        \item \textbf{I} (kIll): Pošle signál \texttt{SIGKILL} procesům, které na předchozí krok nereagovaly.
+        \item \textbf{S} (Sync): Vynutí okamžitý zápis všech dat z RAM mezipaměti (špinavých stránek) na pevný disk.
+        \item \textbf{U} (Unmount): Připojí všechny souborové systémy pouze pro čtení (Read-Only), aby nedošlo k poškození metadat při restartu.
+        \item \textbf{B} (reBoot): Provede okamžitý restart systému (obdoba zmáčknutí reset tlačítka na case).
+    \end{itemize}
+\end{itemize}
+
+\section{Základy běžné uživatelské administrace systému UNIX}
+\begin{quote}
+    \textbf{vytváření souborů a adresářů, operace se soubory a adresáři, prohledávání systému souborů, identita uživatele, procesu, souboru a jejich změna, přístupová práva a jejich nastavení, přesměrování vstupu a výstupu, propojení příkazů, administrace uživatelů, zálohování, programy pro archivaci a kompresi dat, práce s příkazovými interprety, technologie SMART (význam, použití, vybrané údaje)}
+\end{quote}
+
+\subsection{Vytváření a operace se soubory a adresáři}
+\begin{itemize}
+    \item \textbf{Vytváření:}
+    \begin{itemize}
+        \item \texttt{touch <soubor>}: Vytvoří nový prázdný soubor nebo zaktualizuje časové razítko existujícího.
+        \item \texttt{mkdir <adresář>}: Vytvoří nový adresář (přepínač \texttt{-p} vytvoří celou cestu včetně chybějících nadřazených adresářů).
+    \end{itemize}
+    \item \textbf{Operace:}
+    \begin{itemize}
+        \item \texttt{cp <zdroj> <cíl>}: Kopírování souborů. Pro adresáře nutno použít rekurzivně (\texttt{-r}).
+        \item \texttt{mv <zdroj> <cíl>}: Přesun souborů nebo jejich přejmenování (v UNIXu jde o stejnou operaci).
+        \item \texttt{rm <soubor>}: Smazání souboru. Pro adresáře nutno rekurzivně (\texttt{-r}), pro vynucení bez dotazů (\texttt{-f}).
+        \item \texttt{rmdir <adresář>}: Smaže adresář, ale pouze pokud je prázdný.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Prohledávání systému souborů}
+\begin{itemize}
+    \item \textbf{\texttt{find}:} Komplexní vyhledávání v reálném čase podle různých kritérií (jméno, velikost, čas modifikace, vlastník). Příklad: \texttt{find /etc -name "*.conf"}.
+    \item \textbf{\texttt{locate}:} Velmi rychlé hledání cesty k souboru pomocí předem indexované databáze (nutno aktualizovat pomocí \texttt{updatedb}).
+    \item \textbf{\texttt{grep}:} Neprohledává samotný filesystém, ale \textit{obsah} souborů. Hledá řádky odpovídající zadanému regulárnímu výrazu.
+    \item \textbf{ls, cd}
+\end{itemize}
+
+\subsection{Identita uživatele, procesu, souboru a jejich změna}
+\label{sub:identita}
+\begin{itemize}
+    \item \textbf{Uživatel a proces:} Identifikován pomocí UID (User ID) a GID (Group ID). Proces po spuštění přebírá identitu uživatele (viz dříve \hyperref[sub:UID]{RUID/EUID}). Pro zjištění identity se používají příkazy \texttt{id} nebo \texttt{whoami}.
+    \item \textbf{Soubor:} Každý soubor má svého vlastníka (uživatele) a vlastnickou skupinu.
+    \item \textbf{Změna identity:}
+    \begin{itemize}
+        \item \texttt{su <uživatel>}: Přepnutí uživatelského účtu v shellu.
+        \item \texttt{sudo <příkaz>}: Jednorázové spuštění příkazu s právy jiného uživatele (typicky \texttt{root}).
+        \item \texttt{chown <uživatel>:<skupina> <soubor>}: Změna vlastníka a skupiny souboru.
+        \item \texttt{chgrp <skupina> <soubor>}: Změna pouze skupiny.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Přístupová práva a jejich nastavení}
+Přístupová práva se definují pro tři kategorie: \textbf{u} (user/vlastník), \textbf{g} (group/skupina) a \textbf{o} (others/ostatní).
+\begin{itemize}
+    \item \textbf{Základní práva:} \textbf{r} (read / čtení = 4), \textbf{w} (write / zápis = 2), \textbf{x} (execute / spuštění či vstup do adresáře = 1).
+    \item \textbf{\texttt{chmod}:} Nástroj pro změnu práv.
+    \begin{itemize}
+        \item \textit{Oktalově (číselně):} Sečtením hodnot pro každou kategorii. Příklad: \texttt{chmod 755} (vlastník může vše (4+2+1=7), skupina a ostatní mohou jen číst a spouštět (4+1=5)).
+        \item \textit{Symbolicky:} Příklad \texttt{chmod u+x} (přidá vlastníkovi právo spouštět), \texttt{chmod g-w} (odebere skupině právo zápisu).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Přesměrování vstupu/výstupu a propojení příkazů (Pipes)}
+Každý proces v UNIXu má automaticky otevřené 3 standardní proudy dat: \textbf{stdin} (0 - standardní vstup, typicky klávesnice), \textbf{stdout} (1 - standardní výstup, typicky monitor) a \textbf{stderr} (2 - chybový výstup).
+\begin{itemize}
+    \item \textbf{Přesměrování výstupu:} 
+    \begin{itemize}
+        \item \texttt{$>$}: Přesměruje stdout do souboru (pokud existuje, přepíše ho).
+        \item \texttt{$>>$}: Přesměruje stdout a připojí jej na konec souboru (append).
+        \item \texttt{$2>$}: Přesměruje chybový výstup (stderr) do souboru.
+    \end{itemize}
+    \item \textbf{Přesměrování vstupu (\texttt{<}):} Program místo z klávesnice čte vstup ze specifikovaného souboru.
+    \item \textbf{Roura / Pipe (\texttt{|}):} Vezme \texttt{stdout} prvního příkazu a přesměruje ho přímo do \texttt{stdin} druhého příkazu. Umožňuje řetězení jednoduchých nástrojů do složitých operací (např. \texttt{ls -la | grep "txt" | sort}).
+\end{itemize}
+
+\subsection{Administrace uživatelů}
+Základní systémové soubory (dnes už je neupravujeme ručně, ale přes nástroje):
+\begin{itemize}
+    \item \texttt{/etc/passwd}: Seznam uživatelů, jejich UID, GID, domovský adresář a výchozí shell.
+    \item \texttt{/etc/shadow}: Bezpečně uložená (zahashovaná) hesla uživatelů.
+    \item \texttt{/etc/group}: Seznam skupin a jejich členů.
+\end{itemize}
+\textbf{Administrativní příkazy (vyžadují práva roota):}
+\begin{itemize}
+    \item \texttt{useradd <jméno>}: Vytvoření nového uživatele.
+    \item \texttt{usermod <jméno>}: Modifikace existujícího uživatele (např. změna skupin, shellu).
+    \item \texttt{userdel <jméno>}: Smazání uživatele.
+    \item \texttt{passwd <jméno>}: Nastavení nebo změna hesla uživatele.
+\end{itemize}
+
+\subsection{Zálohování, archivace a komprese dat}
+\begin{itemize}
+    \item \textbf{Archivace (\texttt{tar}):} Slouží ke spojení mnoha souborů/adresářů do jednoho velkého archivačního souboru (tzv. tarball). Sám o sobě nekomprimuje. (\texttt{tar -cvf} = vytvoření, \texttt{tar -xvf} = rozbalení).
+    \item \textbf{Komprese (\texttt{gzip, bzip2, xz}):} Zmenšení velikosti souboru. V UNIXu se typicky kombinuje s tar (přepínače \texttt{-z} pro gzip, \texttt{-j} pro bzip2).
+    \item \textbf{Zálohování (\texttt{rsync}):} Velmi mocný nástroj pro synchronizaci a zálohování. Kopíruje pouze změněné části souborů (inkrementální záloha), čímž šetří síťový provoz i čas.
+    \item \textbf{\texttt{dd}:} Bitová kopie disků nebo diskových oddílů (low-level záloha).
+\end{itemize}
+
+\subsection{Práce s příkazovými interprety (Shell)}
+Shell (např. \texttt{bash}, \texttt{zsh}, \texttt{sh}) je textové rozhraní tvořící vrstvu mezi uživatelem a jádrem OS.
+\begin{itemize}
+    \item \textbf{Skriptování:} Shell obsahuje řídící struktury (cykly, podmínky) a umožňuje automatizaci úloh pomocí shell skriptů.
+    \item \textbf{Proměnné prostředí (Environment variables):} Konfigurují běhové prostředí aplikací. Významné jsou např. \texttt{\$PATH} (seznam adresářů, kde systém hledá spustitelné soubory), \texttt{\$USER}, \texttt{\$HOME}. Zpřístupňují se pomocí příkazu \texttt{export}.
+    \item \textbf{Konfigurace:} Každý uživatel má vlastní konfigurační soubory (např. \texttt{\~{}/.bashrc} nebo \texttt{\~{}/.profile}), kde lze definovat aliasy (vlastní zkratky příkazů) nebo upravit vzhled promptu.
+\end{itemize}
+
+\subsection{Technologie SMART}
+\textbf{S.M.A.R.T.} (Self-Monitoring, Analysis and Reporting Technology) je monitorovací systém zabudovaný přímo v pevných discích (HDD/SSD).
+\begin{itemize}
+    \item \textbf{Význam a použití:} Slouží k predikci selhání disku. Neustále sleduje hardwarové parametry a umožňuje administrátorovi včas vyměnit disk před ztrátou dat. V Linuxu se spravuje pomocí sady \texttt{smartmontools} (konkrétně příkaz \texttt{smartctl}).
+    \item \textbf{Klíčové údaje (Atributy):}
+    \begin{itemize}
+        \item \textit{Reallocated Sector Count:} Počet poškozených sektorů, které disk nahradil záložními. Růst této hodnoty jasně značí odcházející disk.
+        \item \textit{Power-On Hours:} Celková doba (v hodinách), po kterou byl disk v provozu.
+        \item \textit{Temperature:} Provozní teplota disku (přehřívání drasticky snižuje životnost).
+        \item \textit{Spin Retry Count (HDD):} Počet marných pokusů o roztočení ploten (značí mechanický problém).
+        \item \textit{Wear Leveling Count (SSD):} Indikátor opotřebení paměťových buněk u SSD.
+    \end{itemize}
+\end{itemize}
+
+\section{Ochrana dat a informací}
+\begin{quote}
+    \textbf{kategorie bezpečnostních přístupů (fyzická, informační, kybernetická, síťová, personál bezpečnost atp.), analýza aktiv, rizik a hrozeb, bezpečnostní politika, plán zvládání rizika a protiopatření. Klíčová legislativa a mezinárodně uznávané standardy v oblasti informační a kybernetické bezpečnosti. Malware a ochrana proti škodlivému softwaru. Princip AAA v bezpečnosti, zabezpečení komunikace, zvýšení odolnosti systému a zálohování, možnosti ochrany HW}
+\end{quote}
+
+Ochrana dat představuje kompromis mezi mírou zabezpecení a použitelností.
+
+\subsection{Kategorie bezpečnostních přístupů}
+
+Ochrana dat a systémů není pouze záležitostí informačních technologií, ale vyžaduje komplexní přístup. Účinné zabezpečení se skládá z několika vzájemně se doplňujících vrstev (tzv. Defense in Depth). Hlavní kategorie bezpečnostních přístupů zahrnují:
+
+\begin{itemize}
+    \item \textbf{Fyzická bezpečnost:} Zajišťuje ochranu samotného hardwaru, datových nosičů, serveroven a budov před neoprávněným fyzickým přístupem, krádeží, poškozením nebo živelnými pohromami. \textit{Prvky: bezpečnostní dveře, kamerové systémy (CCTV), biometrické vstupní systémy, UPS (záložní zdroje), protipožární systémy.}
+
+    \item \textbf{Informační bezpečnost:} Široký koncept chránící data a informace bez ohledu na jejich formu (digitální data, ale i tištěné dokumenty či ústní předání). Její podstatou je udržení tzv. \textbf{CIA triády}:
+    \begin{itemize}
+        \item \textit{Confidentiality (Důvěrnost):} K datům mají přístup jen oprávněné osoby.
+        \item \textit{Integrity (Integrita):} Data nesmí být neoprávněně změněna nebo poškozena.
+        \item \textit{Availability (Dostupnost):} Data musí být přístupná, když je uživatel potřebuje.
+    \end{itemize}
+
+    \item \textbf{Kybernetická bezpečnost:} Podmnožina informační bezpečnosti, která se úzce zaměřuje na ochranu elektronických dat, počítačových systémů, mobilních zařízení a softwaru před digitálními hrozbami a útoky (např. malware, ransomware, DDoS).
+
+    \item \textbf{Síťová bezpečnost:} Specifická část kybernetické bezpečnosti, jejímž cílem je chránit podnikovou síťovou infrastrukturu a data při jejich přenosu. \textit{Prvky: Firewally, VPN (Virtuální privátní sítě) pro šifrovaný přenos, systémy detekce a prevence průniku (IDS/IPS), oddělování sítí (segmentace a VLAN).}
+
+    \item \textbf{Personální bezpečnost:} Řeší lidský faktor. Zaměřuje se na obranu proti hrozbám zevnitř (insider threats) a útokům založeným na sociálním inženýrství (např. phishing). \textit{Prvky: pravidelná školení uživatelů (Security Awareness), prověřování zaměstnanců, offboarding (odebírání přístupů při odchodu).}
+
+    \item \textbf{Organizační (administrativní) bezpečnost:} Zastřešuje celkové řízení bezpečnosti v organizaci. Zahrnuje tvorbu bezpečnostních politik, směrnic, definování rolí, plány obnovy po havárii (Disaster Recovery Plan) a řízení rizik. Zajišťuje také soulad s legislativou a normami (např. GDPR, ISO 27001, Zákon o kybernetické bezpečnosti).
+
+    \item \textbf{Aplikační bezpečnost:} Týká se zabezpečení dat přímo na úrovni softwaru a databází. Zahrnuje využívání bezpečných metod programování (Secure by Design), penetrační testování, pravidelné aktualizace (patch management) a ochranu proti zranitelnostem (např. SQL injection, XSS). Základním pravidlem zde je uplatňování \textbf{principu nejnižšího privilegia} (uživatel má do systému jen taková práva, která nezbytně potřebuje ke své práci).
+\end{itemize}
+
+\subsubsection*{Analýza aktiv, hrozeb a rizik}
+Řízení rizik (Risk Management) je základním stavebním kamenem efektivní ochrany dat. Nelze chránit vše na 100~\%, proto organizace musí vědět, kam směřovat své omezené zdroje. Tento proces sestává z následujících kroků:
+\begin{itemize}
+    \item \textbf{Analýza aktiv:} Identifikace a ohodnocení všeho, co má pro organizaci hodnotu a musí být chráněno. Aktivem nejsou jen data, databáze a servery (informační aktiva), ale také zaměstnanci, fyzické budovy, know-how nebo dobré jméno společnosti (reputace).
+    \item \textbf{Analýza hrozeb a zranitelností:} 
+    \begin{itemize}
+        \item \textit{Hrozba} je událost (nebo útočník), která může aktivum poškodit (např. hacker, ransomware, požár, lidská chyba).
+        \item \textit{Zranitelnost} je slabina v systému (např. neaktualizovaný software, slabé heslo, chybějící zámek). Hrozba využívá zranitelnost k útoku na aktivum.
+    \end{itemize}
+    \item \textbf{Analýza rizik:} Riziko vzniká průnikem hrozby a zranitelnosti. Analýza riziko kvantifikuje nebo kvalifikuje na základě vzorce: \textit{Riziko = Pravděpodobnost hrozby $\times$ Potenciální dopad (škoda na aktivu)}.
+\end{itemize}
+
+\subsubsection*{Bezpečnostní politika organizace}
+Bezpečnostní politika je vrcholový, strategický dokument schválený nejvyšším vedením organizace. Zastřešuje veškeré snažení o ochranu dat a systémů.
+\begin{itemize}
+    \item \textbf{Účel a rozsah:} Definuje základní cíle, pravidla a povinnosti pro zajištění bezpečnosti informací. Deklaruje podporu vedení.
+    \item \textbf{Abstrakce:} Nezabíhá do detailních technických postupů (neřeší např. konfiguraci konkrétního routeru), ale stanovuje závazný rámec (např. ,,veškerá externí datová komunikace musí být šifrována'').
+    \item \textbf{Návazná dokumentace:} Z bezpečnostní politiky vycházejí podrobné směrnice a standardy (např. směrnice pro tvorbu hesel, pravidla pro práci z domova, politika čistého stolu).
+    \item \textbf{Závaznost:} Politika je závazná pro všechny zaměstnance a externí spolupracovníky, její porušení bývá sankcionováno na základě pracovněprávních předpisů.
+\end{itemize}
+
+\subsubsection*{Plán zvládání rizika a protiopatření}
+Na základě výsledků analýzy rizik rozhoduje vedení organizace o způsobu, jakým s jednotlivými riziky naloží. Existují čtyři základní strategie:
+\begin{itemize}
+    \item \textbf{Snížení (Mitigace) rizika:} Nasazení protiopatření, která sníží pravděpodobnost výskytu hrozby nebo minimalizují její dopad.
+    \item \textbf{Přenos (Transfer) rizika:} Přenesení finančních či provozních následků na třetí stranu (např. sjednání kybernetického pojištění nebo outsourcing rizikové služby do cloudu).
+    \item \textbf{Vyhnutí se riziku:} Úplné ukončení činnosti nebo procesu, který riziko generuje (např. zákaz používání USB flash disků ve firmě, vypnutí zastaralého systému).
+    \item \textbf{Akceptace rizika:} Náklady na protiopatření by byly vyšší než hodnota samotného aktiva nebo potenciální škoda. Vedení riziko formálně přijme a je připraveno nést případné následky.
+\end{itemize}
+\textbf{Protiopatření:} Jsou konkrétní mechanismy (bezpečnostní kontroly) k mitigaci rizik. Dělí se dle účelu na \textit{preventivní} (zabraňují incidentu, např. firewall), \textit{detekční} (upozorní na probíhající incident, např. alarm) a \textit{korekční/reaktivní} (obnova dat ze zálohy po havárii).
+
+\subsection{Legislativa a standardy}
+
+Oblast ochrany dat a kybernetické bezpečnosti je přísně regulována. Zatímco legislativa definuje \textbf{co} musí být chráněno (závazné právní mantinely), mezinárodní standardy poskytují osvědčené postupy (Best Practices), \textbf{jak} toho technicky a procesně dosáhnout.
+
+\subsubsection*{Klíčová legislativa Evropské unie}
+\begin{itemize}
+    \item \textbf{GDPR (Obecné nařízení o ochraně osobních údajů)} 
+    \item \textbf{Směrnice NIS 2 (Network and Information Security)}
+    \item \textbf{DORA (Digital Operational Resilience Act)}
+\end{itemize}
+\subsubsection*{Klíčová legislativa České republiky}
+\begin{itemize}
+    \item \textbf{Zákon o kybernetické bezpečnosti (ZKB):} Implementuje evropskou směrnici NIS do českého práva. Vymezuje práva a povinnosti pro orgány státní správy, provozovatele kritické informační infrastruktury (KII) a poskytovatele základních služeb. Kontrolním a metodickým orgánem je \textbf{NÚKIB} (Národní úřad pro kybernetickou a informační bezpečnost).
+    \item \textbf{Zákon o zpracování osobních údajů:} Adaptační zákon, který doplňuje a upřesňuje pravidla GDPR pro prostředí ČR. Dozorovým orgánem pro tuto oblast je \textbf{ÚOOÚ} (Úřad pro ochranu osobních údajů).
+\end{itemize}
+
+\subsubsection*{Mezinárodně uznávané standardy}
+Kromě legislativy se organizace řídí normami, které umožňují systematické řízení bezpečnosti. Často slouží jako podklad pro získání certifikace, kterou firmy vyžadují v rámci obchodních smluv.
+Organizace vytvářenící normi: ISO, IEC, ITU (v ČR: ČSNI, pro EU: ENISA)
+\begin{itemize}
+    \item \textbf{Rodina norem ISO/IEC 27000:} Nejznámější globální standardy pro informační bezpečnost.
+    \begin{itemize}
+        \item \textbf{ISO/IEC 27001:} Specifikuje požadavky na zavedení a udržování \textbf{ISMS} (Information Security Management System - Systém řízení bezpečnosti informací). Je založen na neustálém zlepšování pomocí Demingova cyklu \textbf{PDCA} (Plan - Do - Check - Act). Organizace se dle této normy mohou nechat certifikovat.
+        \item \textbf{ISO/IEC 27002:} Obsahuje podrobný katalog konkrétních bezpečnostních opatření (kontrol), které pomáhají naplnit požadavky normy 27001.
+    \end{itemize}
+    \item \textbf{NIST Cybersecurity Framework (CSF):} Velmi populární rámec vyvinutý americkým Národním institutem standardů a technologie. Dělí obranu do pěti logických fází, které se dobře komunikují vedení firmy: \textbf{Identify} (Identifikuj aktiva a rizika) $\rightarrow$ \textbf{Protect} (Chraň je) $\rightarrow$ \textbf{Detect} (Detekuj útok) $\rightarrow$ \textbf{Respond} (Reaguj na incident) $\rightarrow$ \textbf{Recover} (Obnov provoz).
+\end{itemize}
+
+\subsection{Malware}
+
+\textbf{Malware} (z anglického \textit{malicious software} – škodlivý software) je zastřešující pojem pro jakýkoliv program nebo kód vytvořený s cílem poškodit počítačový systém, odcizit data, získat neoprávněný přístup nebo vydírat oběť. 
+
+\subsubsection*{Základní typy malwaru}
+Škodlivý kód se klasifikuje především podle způsobu šíření a svého chování:
+\begin{itemize}
+    \item \textbf{Počítačový virus:} Připojuje se k legitimním spustitelným souborům. K aktivaci a šíření vyžaduje interakci uživatele (např. spuštění infikovaného souboru).
+    \item \textbf{Červ (Worm):} Na rozdíl od viru je samostatný a nepotřebuje hostitelský soubor ani interakci uživatele. K masivnímu šíření sítí využívá bezpečnostní zranitelnosti OS a aplikací.
+    \item \textbf{Trojský kůň (Trojan):} Maskuje se jako užitečný nebo legitimní program. Sám se nereplikuje, ale po instalaci uživatelem často otevírá zadní vrátka do systému (Backdoor) pro stažení dalšího malwaru.
+    \item \textbf{Ransomware:} Zašifruje data na disku (nebo uzamkne zařízení) a za dešifrovací klíč požaduje výkupné. Moderní varianty data před zašifrováním navíc ukradnou a hrozí jejich zveřejněním.
+    \item \textbf{Spyware a Keyloggery:} Skrytě sledují činnost uživatele, kradou přihlašovací údaje, historii prohlížení a zaznamenávají stisky kláves.
+    \item \textbf{Rootkit:} Sofistikovaný malware operující hluboko v systému (často na úrovni jádra OS). Jeho cílem je utajit svou přítomnost a přítomnost dalšího škodlivého kódu před antivirem.
+    \item \textbf{Botnet:} Síť infikovaných zařízení (zvaných zombie), která útočník ovládá na dálku. Slouží k rozesílání spamu nebo k hromadným \textbf{DDoS} útokům.
+\end{itemize}
+
+\subsubsection*{Ochrana a protiopatření}
+Obrana proti malwaru musí být vícevrstvá, nelze spoléhat pouze na jeden nástroj:
+\begin{itemize}
+    \item \textbf{Antivirové systémy a EDR:} Běžný antivirus funguje na bázi detekce \textit{virových signatur} (známých vzorů v kódu). Moderní firemní ochrana využívá \textbf{EDR} (Endpoint Detection and Response), která analyzuje nestandardní \textit{chování} procesů v reálném čase pomocí AI a dokáže zastavit i dosud neznámý malware (Zero-day hrozby).
+    \item \textbf{Patch Management (Aktualizace):} Pravidelné a včasné instalování bezpečnostních záplat operačního systému a aplikací, což eliminuje zranitelnosti, které využívají červi.
+    \item \textbf{Filtrování sítě a e-mailů:} Většina malwaru (zejména ransomware a trojské koně) přichází formou \textbf{phishingu} v e-mailu. Nutností je blokování nebezpečných příloh a zakázání spouštění maker v dokumentech MS Office.
+    \item \textbf{Zálohování:} Jediná 100\% spolehlivá obrana proti ransomwaru. Ideálně dle pravidla \textbf{3-2-1} (3 kopie dat, na 2 různých médiích, z toho 1 geograficky oddělena/offline). Zálohy navíc musí být chráněny proti smazání (tzv. immutable backups).
+    \item \textbf{Vzdělávání uživatelů:} Školení zaměstnanců např. proti phishingu.
+\end{itemize}
+
+\subsection{Princip AAA v bezpečnosti}
+Proces řízení přístupu k datům a systémům se opírá o bezpečnostní model \textbf{AAA}, který se skládá ze tří na sebe navazujících kroků (předchází jim \textit{Identifikace} – uživatel řekne, kdo je, např. zadá login):
+\begin{itemize}
+    \item \textbf{Autentizace (Authentication – Ověření totožnosti):} Uživatel dokazuje, že je skutečně tím, za koho se vydává. Provádí se pomocí něčeho, co uživatel \textit{zná} (heslo, PIN), co \textit{má} (čipová karta, token, mobil) nebo čím \textit{je} (biometrie – otisk, Face ID). Dnes je standardem \textbf{MFA} (Vícefaktorová autentizace).
+    \item \textbf{Autorizace (Authorization – Oprávnění):} Systém na základě ověřené identity přidělí uživateli přístupová práva. Využívá se zde \textbf{RBAC} (Role-Based Access Control) – práva se nepřidělují jednotlivcům, ale pracovním rolím. Platí princip \textbf{nejnižšího privilegia} (přístup jen k tomu, co je nezbytné pro práci).
+    \item \textbf{Auditování (Accounting – Záznam):} Monitorování a logování toho, co uživatel v systému dělal (kdy se přihlásil, jaké soubory smazal). Slouží k vyšetřování incidentů a zajištění principu \textit{nepopiratelnosti} (Non-repudiation).
+\end{itemize}
+
+\subsection{Zabezpečení komunikace}
+Cílem je ochrana dat při jejich přenosu (Data in Transit) před odposlechem a modifikací. Zajišťuje se pomocí kryptografie a síťových protokolů:
+\begin{itemize}
+    \item \textbf{Šifrování sítě:} Pro bezpečný přístup do firemní sítě přes nezabezpečený internet se využívá \textbf{VPN} (Virtuální privátní síť), která vytváří šifrovaný tunel (protokoly IPsec nebo OpenVPN).
+    \item \textbf{Zabezpečení aplikační vrstvy:} Přenos webových stránek a API komunikace musí probíhat přes \textbf{HTTPS/TLS}. Pro e-maily či messengery se využívá \textbf{E2EE} (End-to-End šifrování), kdy data dokáže dešifrovat pouze odesílatel a příjemce (ani provozovatel služby k nim nemá přístup).
+    \item \textbf{Digitální podpisy a haše:} Pro ověření integrity zpráv (zda nebyly po cestě změněny) a ověření identity odesílatele (asymetrická kryptografie, infrastruktura veřejných klíčů -- PKI).
+\end{itemize}
+
+\subsection{Zvýšení odolnosti systému a zálohování}
+Odolnost znamená schopnost systému pokračovat v provozu i při selhání hardwaru nebo útoku.
+\begin{itemize}
+    \item \textbf{Vysoká dostupnost (High Availability) a Redundance:} Kritické prvky (servery, disky, switche, zdroje napájení) jsou zdvojeny. Při výpadku primárního prvku automaticky přebírá zátěž záložní (Failover). Využívají se disková pole \textbf{RAID} a clustering serverů.
+    \item \textbf{Zálohování (Backup):} Vytváření kopií dat pro případ ztráty. Definuje se dvěma klíčovými metrikami:
+    \begin{itemize}
+        \item \textbf{RPO (Recovery Point Objective):} O kolik dat si může firma dovolit přijít (např. zálohujeme každou hodinu = RPO je 1 hodina).
+        \item \textbf{RTO (Recovery Time Objective):} Za jak dlouho po havárii musí být systém opět plně funkční.
+    \end{itemize}
+    \item \textbf{Typy záloh:} \textit{Plná} (všechna data, pomalá), \textit{Inkrementální} (pouze změny od poslední jakékoliv zálohy, rychlá tvorba, pomalá obnova), \textit{Diferenciální} (změny od poslední plné zálohy).
+\end{itemize}
+
+\subsection{Možnosti ochrany hardwaru}
+Kromě klasické fyzické bezpečnosti (zámky, mříže, kamery, UPS, generátory, biometrický přístup do serveroven) se HW chrání i na úrovni samotného zařízení:
+\begin{itemize}
+    \item \textbf{Šifrování celého disku (FDE - Full Disk Encryption):} Nástroje jako BitLocker (Windows) nebo FileVault (macOS) šifrují pevný disk. Pokud je notebook nebo disk fyzicky ukraden, data jsou bez dešifrovacího klíče nečitelná.
+    \item \textbf{Čip TPM (Trusted Platform Module):} Specializovaný kryptografický čip na základní desce zařízení. Bezpečně uchovává šifrovací klíče a zajišťuje proces tzv. \textit{Secure Boot} (ověřuje, že se při startu počítače nespouští škodlivý kód, např. rootkit).
+    \item \textbf{Ochrana portů a BIOS/UEFI:} Ochrana vstupu do BIOSu heslem, zamezení bootování z externích médií a softwarové či fyzické uzamčení USB portů proti vložení neoprávněných flash disků (ochrana před únikem dat – DLP, i před zavlečením malwaru).
+\end{itemize}
+
+\section{Kryptografie}
+\begin{quote}
+    \textbf{základní principy a pojmy v oblasti kryptografie, klasifikace šifer (substituční, monoalfabetické, homofonní atp.), kryptografický systém, klíč, časová a paměťová náročnost, kryptoanalýza. Hashovací funkce, steganografie, symetrické a asymetrické šifrování, infrastruktura veřejných klíčů, certifikáty, certifikační autority}
+\end{quote}
+
+\subsection{Základní principy a pojmy v oblasti kryptografie}
+
+Kryptografie je vědní disciplína (součást kryptologie), která se zabývá tvorbou a zkoumáním metod pro bezpečný přenos a ukládání dat za přítomnosti protivníka (útočníka). Její podstatou je transformace srozumitelných dat do nesrozumitelné podoby a naopak s využitím matematických aparátů.
+
+\subsubsection*{Základní pojmy}
+\begin{itemize}
+    \item \textbf{Otevřený text (Plaintext):} Původní, srozumitelná zpráva nebo data určená k zašifrování.
+    \item \textbf{Šifrový text (Ciphertext):} Zašifrovaná, pro neoprávněnou osobu nesrozumitelná zpráva.
+    \item \textbf{Šifrování (Encryption):} Proces transformace otevřeného textu na šifrový text pomocí šifrovacího algoritmu a klíče.
+    \item \textbf{Dešifrování (Decryption):} Opačný proces, kdy oprávněný příjemce transformuje šifrový text zpět na otevřený text.
+    \item \textbf{Klíč (Key):} Tajný parametr (sekvence bitů), který řídí proces šifrování a dešifrování. Zajišťuje, že i při znalosti šifrovacího algoritmu nelze zprávu bez správného klíče přečíst.
+    \item \textbf{Šifra / Šifrovací algoritmus:} Matematická funkce (nebo sada instrukcí), která definuje, jak přesně probíhá transformace dat.
+\end{itemize}
+
+\subsubsection*{Cíle kryptografie}
+Kryptografické mechanismy neslouží pouze k samotnému utajení obsahu zprávy, ale plní čtyři základní funkce moderní informační bezpečnosti:
+\begin{itemize}
+    \item \textbf{Důvěrnost (Confidentiality):} Zajištění, že data si může přečíst pouze ten uživatel, který vlastní správný dešifrovací klíč.
+    \item \textbf{Integrita (Integrity):} Schopnost spolehlivě detekovat, zda data nebyla během přenosu nebo uložení neoprávněně (či náhodně) změněna. K tomuto účelu slouží tzv. hašovací funkce.
+    \item \textbf{Autentizace (Authentication):} Prokázání identity komunikující strany, tedy bezpečné ověření, že data skutečně pocházejí od deklarovaného odesílatele.
+    \item \textbf{Nepopiratelnost (Non-repudiation):} Odesílatel zprávy nemůže v budoucnu lživě popřít, že zprávu odeslal nebo vytvořil. Typicky se realizuje pomocí asymetrické kryptografie a digitálních podpisů.
+\end{itemize}
+
+\subsubsection*{Kerckhoffsův princip}
+Zásadní teoretické pravidlo moderní kryptografie (formulované v 19. století), které říká, že \textbf{bezpečnost šifrovacího systému nesmí záviset na utajení samotného algoritmu, ale pouze na utajení klíče}. 
+
+\subsection{Klasifikace šifer (Základní operace a klasické šifry)}
+
+Z hlediska základního principu fungování dělíme šifry do dvou hlavních kategorií: \textbf{transpoziční} a \textbf{substituční}.
+
+\subsubsection*{1. Transpoziční (permutační) šifry}
+Znaky otevřeného textu se nenahrazují jinými, ale pouze se mění jejich pořadí (přeskupují se) podle určitého pravidla. Z textu se stává přesmyčka (anagram).
+Cílem je difúze informacního obsahu zprávy po celé její délce.
+Kryptoanalýza je namáhavejší než u substitucních šifer.
+Nevýhodou použití jsou pametové a casové nároky pri šifrování.
+\begin{itemize}
+    \item \textit{Příklad:} Skytalé (starověké Řecko - navíjení pergamenu na válec určitého průměru), Rail Fence (psaní textu do "plotu").
+\end{itemize}
+
+\subsubsection*{2. Substituční šifry}
+Každý znak (nebo skupina znaků) otevřeného textu je nahrazen jiným znakem, symbolem nebo číslem podle stanoveného klíče. Původní pořadí znaků zůstává zachováno. Dále se dělí na několik typů:
+
+\begin{itemize}
+    \item \textbf{Monoalfabetické šifry:} K šifrování se používá pouze jedna šifrovací abeceda. Jeden konkrétní znak otevřeného textu je vždy nahrazen stejným znakem šifrového textu (např. každé "A" se změní na "D").
+    \begin{itemize}
+        \item \textit{Příklad:} Caesarova šifra (posun abecedy o pevný počet míst).
+        \item \textit{Zranitelnost:} Velmi snadno prolomitelné pomocí \textbf{frekvenční analýzy} (porovnání četnosti znaků v šifrovém textu s průměrnou četností znaků v daném přirozeném jazyce).
+    \end{itemize}
+
+    \item \textbf{Homofonní šifry:} Byly vytvořeny jako obrana proti frekvenční analýze. Jeden znak otevřeného textu může být nahrazen několika různými znaky (nebo čísly) šifrového textu. Znakům, které se v jazyce vyskytují často (např. samohláska "E"), je přiřazeno více možných šifrových variant, čímž se vyrovná rozložení četnosti v šifrovém textu.
+
+    \item \textbf{Polygramové šifry:} Nenahrazují znaky po jednom (po písmenech), ale šifrují skupiny znaků najednou (např. dvojice písmen - bigramy, nebo trojice - trigramy).
+    \begin{itemize}
+        \item \textit{Příklad:} Playfairova šifra (šifruje dvojice písmen pomocí matice 5x5).
+    \end{itemize}
+
+    \item \textbf{Polyalfabetické šifry:} Používají více šifrovacích abeced současně. To, jakou abecedou se daný znak zašifruje, závisí na jeho pozici v textu a na použitém klíči (hesle). Jedno písmeno "A" tak může být v šifrovém textu reprezentováno pokaždé jiným znakem.
+    \begin{itemize}
+        \item \textit{Příklad:} Vigenèrova šifra. Odolnost proti běžné frekvenční analýze je zde mnohem vyšší.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Kryptografický systém (Kryptosystém)}
+Kryptosystém je komplexní soubor prvků, algoritmů a postupů, které společně umožňují bezpečné šifrování a dešifrování dat. Podle způsobu šifrování a přenášení klíče se rozděluje na varianty:
+\begin{itemize}
+    \item Symetrické
+    \item Asymetrické
+    \item Hybridní
+\end{itemize}
+
+\subsection{Klíč}
+Klíč je tajný parametr, který vstupuje do šifrovacího či dešifrovacího algoritmu a mění jeho chování. V souladu s Kerckhoffsovým principem je bezpečnost celého systému závislá výhradně na utajení tohoto klíče.
+\begin{itemize}
+    \item \textbf{Délka klíče:} Udává se v bitech a určuje velikost prostoru klíčů (např. klíč o délce $n$ bitů má $2^n$ možných kombinací). Čím delší klíč je, tím obtížnější je jeho prolomení.
+\end{itemize}
+
+\subsection{Kryptoanalýza}
+Kryptoanalýza je vědní disciplína zabývající se hledáním slabin v kryptografických systémech a jejich prolamováním bez předchozí znalosti klíče. Podle informací, které má útočník k dispozici, rozlišujeme základní modely útoků:
+\begin{itemize}
+    \item \textbf{Útok pouze se znalostí šifrového textu (Ciphertext-only):} Útočník má k dispozici pouze zašifrované zprávy a snaží se z nich odvodit otevřený text nebo klíč.
+    \item \textbf{Útok se znalostí otevřeného textu (Known-plaintext):} Útočník zná (nebo uhodne) textovou podobu části zprávy a zároveň má k dispozici její šifrovaný ekvivalent.
+    \item \textbf{Útok s volbou otevřeného textu (Chosen-plaintext):} Útočník má možnost nechat zašifrovat libovolný vlastní text a analyzovat vzniklý šifrový text.
+    \item \textbf{Útok hrubou silou (Brute-force):} Systematické zkoušení všech možných kombinací klíčů z prostoru $K$, dokud se neobjeví smysluplný otevřený text.
+    \item \textbf{Další:} Slovníkoví útok, Frekvenční analýza
+\end{itemize}
+
+\subsection{Výpočetní náročnost}
+Bezpečnost moderních šifer se opírá o tzv. výpočetní bezpečnost — útok je teoreticky možný, ale prakticky neproveditelný z důvodu limitovaných zdrojů (času a paměti). Hodnotí se proto asymetricky:
+\begin{itemize}
+    \item \textbf{Časová náročnost:} Vyjadřuje množství operací (procesorového času) potřebných k provedení algoritmu. Pro legitimní uživatele musí být šifrování a dešifrování rychlé (polynomiální čas $\mathcal{O}(n^k)$). Pro útočníka bez klíče musí být kryptoanalýza časově nezvládnutelná (exponenciální čas $\mathcal{O}(2^n)$), trvající například miliony let i na superpočítačích.
+    \item \textbf{Paměťová náročnost:} Vyjadřuje množství operační paměti (RAM) nebo úložného prostoru, které algoritmus během svého běhu vyžaduje. Většina běžných šifer je navržena s ohledem na minimální paměťovou náročnost, aby fungovaly na vestavěných zařízeních či čipových kartách. Naopak u specifických funkcí (např. hashování hesel jako Argon2) se paměťová náročnost záměrně zvyšuje, což slouží jako obrana proti hardwarové akceleraci útoků pomocí GPU a ASIC čipů.
+\end{itemize}
+
+\subsection{Hashovací funkce}
+Matematické algoritmy, které přijímají vstupní data libovolné délky a převádějí je na výstup pevné, předem dané délky (tzv. hash, otisk zprávy nebo fingerprint).
+\begin{itemize}
+    \item \textbf{Základní vlastnosti:}
+    \begin{itemize}
+        \item \textbf{Jednosměrnost:} Ze získaného hashe nelze matematicky zkonstruovat původní zprávu.
+        \item \textbf{Bezkoliznost:} Je výpočetně neproveditelné najít dvě různé zprávy, které by měly stejný hash.
+        \item \textbf{Citlivost na vstup:} I nepatrná změna na vstupu (např. změna jednoho znaku) vede ke zcela odlišnému výslednému hashi.
+    \end{itemize}
+    \item \textbf{Využití:} Kontrola integrity dat (zda nebyl soubor poškozen či pozměněn), bezpečné ukládání hesel (neukládá se heslo, ale pouze jeho hash) a tvorba digitálních podpisů. Příklady: rodina SHA-2, SHA-3.
+\end{itemize}
+
+\subsection{Steganografie}
+Na rozdíl od kryptografie, která zprávu činí nesrozumitelnou (ale je zjevné, že jde o šifru), steganografie skrývá samotnou existenci zprávy.
+\begin{itemize}
+    \item \textbf{Princip:} Tajná data jsou vložena do jiného, na první pohled neškodného nosiče (tzv. cover medium), aby nevzbudila pozornost útočníka.
+    \item \textbf{Využití:} Úprava nejméně významných bitů (LSB) v obrazových (JPEG, PNG) nebo zvukových souborech. Často se kombinuje s kryptografií — zpráva se nejprve bezpečně zašifruje a následně se vzniklý šifrový text steganograficky skryje.
+\end{itemize}
+
+\subsection{Symetrické a asymetrické šifrování}
+Liší přístupem ke kryptografickým klíčům:
+\begin{itemize}
+    \item \textbf{Symetrické šifrování:} Používá stejný klíč pro šifrování i dešifrování.
+    \begin{itemize}
+        \item \textit{Výhody:} Velmi rychlé a výpočetně nenáročné, ideální pro šifrování velkých objemů dat.
+        \item \textit{Nevýhody:} Zásadní problém s distribucí klíče — obě komunikující strany si musí před zahájením komunikace bezpečně předat tajný klíč tak, aby jej nikdo neodposlechl.
+        \item \textit{Příklady:} 
+        \begin{itemize}
+            \item blokové -- AES (Advanced Encryption Standard), DES, ChaCha20, RC5, Blowfish
+            \item Proudové -- RC4
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Asymetrické šifrování:} Používá matematicky provázaný pár klíčů — veřejný klíč (Public Key) a soukromý klíč (Private Key). Co jedním klíčem zašifrujeme, to lze dešifrovat pouze druhým klíčem z páru.
+    \begin{itemize}
+        \item \textit{Princip:} Veřejný klíč odesílatel volně zveřejní. Kdokoliv jím může zašifrovat zprávu, ale dešifrovat ji může pouze majitel patřičného soukromého klíče, který drží v tajnosti.
+        \item \textit{Výhody:} Řeší problém bezpečné distribuce klíčů a umožňuje realizaci digitálních podpisů (zajišťuje nepopiratelnost a autentizaci).
+        \item \textit{Nevýhody:} Výpočetně velmi náročné a pomalé (běžně se proto používá k bezpečné výměně symetrického klíče, kterým se pak šifrují samotná data — tzv. hybridní šifrování).
+        \item \textit{Příklady:} Diffie-Hellman, El Gamal, RSA, kryptografie eliptických křivek (ECC), DSA pro elektronické podpisy.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Infrastruktura veřejných klíčů (PKI) a certifikáty}
+Aby asymetrická kryptografie fungovala v praxi (např. na internetu), je nutné zajistit, že daný veřejný klíč skutečně patří tomu, kdo to o sobě tvrdí (obrana proti útoku Man-in-the-Middle). K tomu slouží systém PKI.
+\begin{itemize}
+    \item \textbf{PKI (Public Key Infrastructure):} Ucelený systém hardwaru, softwaru, lidí, politik a postupů potřebných pro vytváření, správu, distribuci a revokaci digitálních certifikátů.
+    \item \textbf{Digitální certifikát:} Elektronický dokument (typicky ve formátu X.509), který pevně svazuje veřejný klíč s identitou jeho majitele (např. s doménou webového serveru nebo jménem osoby).
+    
+    Obsahuje:
+    \begin{itemize}
+        \item Veřejný klíč
+        \item Informace o držiteli
+        \item Platnost certifikátu
+        \item Název a podpis certifikační autority
+    \end{itemize}
+    \item \textbf{Certifikační autorita (CA):} Důvěryhodná třetí strana, která funguje jako digitální notář. CA ověří identitu žadatele a pokud je vše v pořádku, žadatelův certifikát (obsahující jeho veřejný klíč) elektronicky podepíše svým vlastním soukromým klíčem. Pokud uživatelský počítač důvěřuje této CA, bude automaticky důvěřovat i všem certifikátům, které vydala. (např. Lets encrypt, DigiCert, Globalsign, Comodo)
+\end{itemize}

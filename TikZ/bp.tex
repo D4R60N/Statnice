@@ -1,0 +1,24 @@
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            boxplot/draw direction=y, % horizontální boxplot
+            xtick={1}, 
+            xticklabels={Měření 1},
+            ymin=0, ymax=25,
+            title={Krabicový graf (Boxplot)}
+        ]
+            \addplot+[
+                boxplot prepared={
+                    lower whisker=4,  % Minimum (bez outlierů)
+                    lower quartile=8, % Q1
+                    median=12,        % Q2 (medián)
+                    upper quartile=16,% Q3
+                    upper whisker=21  % Maximum (bez outlierů)
+                },
+                mark=*, % značka pro outliery
+                color=teal, solid, fill=teal!20, thick
+            ] coordinates {(0, 1) (0, 24)}; % Souřadnice (y, hodnota outlieru)
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
